@@ -77,3 +77,21 @@ Exit: demonstrate the integrated capability to inform continue/amend/simplify/st
 ### Milestone 2.4 — Phase review
 
 Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess H01–H04, A06–A09 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.2.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
+
+## Phase 3 — Dynamic ghost visibility
+
+Outcome: The ghost responds to the projected piece’s occupied-cell position relative to the midline. Target version: **0.3.0**. Depends on: completed, verified, integrated and released Phase 2.
+
+Included/excluded scope: Only conditional rendering and its direct regressions; no configuration UI or change to the target solver.
+
+### Milestone 3.1 — Midline-aware ghost
+
+Outcome and integration: Implement occupied-cell midline classification; Integrate dynamic visibility without landing side effects; Verify and document dynamic ghost behavior.
+
+Prerequisite: phase entry gate.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify G01, G01, A10, A10. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 3.2 — Phase review
+
+Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess G01, A10 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.3.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
