@@ -13,6 +13,7 @@ Source, test, tooling, user-document and distribution paths below are planned al
 | Documentation and distribution | README.md, docs/user/CONTROLS.md; dist/ (generated) | Validated user/developer commands, controls, static build. | Built-page smoke and documented command readback |
 | Landing and enhanced controls | src/domain/landing.ts; existing session/stream/controller/view modules | Canonical landing, bag/Hold and timing remain with their logical owners. | tests/unit/ landing/bag/kick; tests/browser/enhanced.spec.ts |
 | Ghost visibility | src/domain/ghost-visibility.ts | Pure occupied-cell predicate; browser view renders it. | tests/unit/ midline fixtures; tests/browser/ghost.spec.ts |
+| Penetrator behavior | Existing landing.ts, geometry.ts, session.ts, controller.ts and game-view.ts | Mode/inventory rules stay in session; landing module owns both modes. | tests/unit/ cavity fixtures; tests/browser/penetrator.spec.ts |
 
 ## Shared paths and generated artifacts
 
