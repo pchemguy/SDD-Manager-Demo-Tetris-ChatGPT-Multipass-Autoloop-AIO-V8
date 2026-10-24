@@ -110,3 +110,34 @@ The [PLAN](PLAN.md) owns strategic outcomes/exits, [SPEC](SPEC.md) owns behavior
             Depends on: all Phase 3 delivery milestones completed and closed; final boundary T-025.
             Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.3.0 release preparation.
             Evidence: commit docs/dev/reports/phases/3/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.
+
+## Phase 4 — Penetrator gameplay
+
+- [ ] Phase 4 — Penetrator gameplay
+    - [ ] Milestone 4.1 — Traversal and active-piece lifecycle
+        - [ ] T-027 — Implement mode-aware terminal landing search
+            Scope: src/domain/landing.ts; adversarial board fixtures. Depends on: T-026.
+            Contracts: P02, A11. Evidence: Scan below intervening blockers; prove sealed cavities, target above floor and absent candidate target.
+        - [ ] T-028 — Integrate penetrator descent and legal contact
+            Scope: src/domain/session.ts, geometry.ts; timing tests. Depends on: T-027.
+            Contracts: P02–P03. Evidence: Gravity/soft/hard drop reach the same legal target; overlapping intermediate states never lock or alter settled cells.
+        - [ ] T-029 — Implement atomic activation and active Hold exclusion
+            Scope: src/domain/session.ts, src/app/controller.ts; tests. Depends on: T-028.
+            Contracts: P01–P03. Evidence: P spends once only when eligible; candidate rejection, repeated activation, Hold rejection and contact recomputation preserve invariants.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/4/4.1.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-027, T-028.
+    - [ ] Milestone 4.2 — Rewards, indicators and acceptance
+        - [ ] T-030 — Award capped bonuses in the lock transaction
+            Scope: src/domain/session.ts; lock/clear fixtures. Depends on: T-029.
+            Contracts: P01, P03. Evidence: Four lines award one up to three, other clears none; restart begins at zero.
+        - [ ] T-031 — Render white active ability and live bonus indicators
+            Scope: src/browser/game-view.ts, styles.css; view tests. Depends on: T-030.
+            Contracts: P01. Evidence: Four active cells white, regular/settled kinds non-white, ghost distinct; one lightning symbol per bonus and accessible count.
+        - [ ] T-032 — Verify penetrator interactions and document controls
+            Scope: tests/browser/penetrator.spec.ts, docs/user/CONTROLS.md. Depends on: T-031.
+            Contracts: A11–A12. Evidence: Both browsers exercise earned/spent/capped inventory, traversal, ghost/drop agreement, active Hold rejection, legal locks and restart; prepare release evidence.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/4/4.2.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-030, T-031.
+    - [ ] Milestone 4.3 — Phase review
+        - [ ] T-033 — Review and report Phase 4
+            Depends on: all Phase 4 delivery milestones completed and closed; final boundary T-032.
+            Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.4.0 release preparation.
+            Evidence: commit docs/dev/reports/phases/4/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.
