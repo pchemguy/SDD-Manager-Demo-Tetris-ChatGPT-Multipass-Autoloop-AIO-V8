@@ -8,6 +8,7 @@ Build a playable single-player game for desktop browser users with a keyboard. T
 
 - A 10-column, 20-row board; seven tetrominoes; keyboard movement, clockwise rotation, fixed gravity, soft drop, line clearing and scoring; blocked-spawn game over and full restart.
 - Hold, a landing ghost, 7-bag randomization, deterministic wall kicks and hard drop. Grounded pieces normally lock after a full gravity interval; a hard drop does not bypass that delay.
+- Dynamic ghost visibility: show the projected piece only when every projected cell is in the lower half. A piece straddling the midline is hidden.
 
 ## Experience and quality
 
@@ -18,7 +19,6 @@ Provide visible keyboard instructions, focus and game status; never communicate 
 ## Boundaries
 
 - Multiplayer, accounts, service-backed leaderboards, touch input and audio.
-- Conditional ghost visibility.
 - Penetrator mode and bonuses.
 - Next preview and settings controls.
 - Cookies, URL settings and saved game state.
