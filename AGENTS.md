@@ -43,3 +43,7 @@ Follow `sdd-manage`'s preparation and phase-activation workflows for required tr
 ## Project guidance
 
 Maintain project-specific navigation and validated setup/check commands here as they become established. Do not invent commands, paths, requirements or completion claims.
+
+## Current project navigation
+
+Desktop browser Tetris; governing documents are [PROJECT](docs/dev/PROJECT.md), [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DECOMPOSITION](docs/dev/DECOMPOSITION.md), [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md) and [layout](docs/dev/layout.md). Executable implementation work will be owned by docs/dev/TASKS.md when prepared; documentation preparation remains owned by DOCS_TASKS and DOCS_PREPARATION. Source/test allocations are planned; no application commands have been validated yet. Read applicable nested instructions before path-scoped work.
