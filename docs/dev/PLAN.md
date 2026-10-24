@@ -43,3 +43,37 @@ Exit: demonstrate the integrated capability to inform continue/amend/simplify/st
 ### Milestone 1.4 — Phase review
 
 Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess B01–B06, A01–A05 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.1.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
+
+## Phase 2 — Enhanced piece handling
+
+Outcome: Modern piece handling with predictable sequence, Hold, kicks, ghost, hard drop and contact delay. Target version: **0.2.0**. Depends on: completed, verified, integrated and released Phase 1.
+
+Included/excluded scope: Implement enhanced policies together because Hold, landing and contact timing share active-piece lifecycle. Conditional ghost hiding, penetrator, next preview and settings are excluded.
+
+### Milestone 2.1 — Sequence and Hold
+
+Outcome and integration: Implement deterministic seven-bag consumption; Implement Hold as a session transaction; Integrate Hold controls and held-piece display.
+
+Prerequisite: phase entry gate.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify H01, H01, A06. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 2.2 — Rotation and landing controls
+
+Outcome and integration: Implement ordered clockwise wall kicks; Implement shared normal landing and ghost rendering; Integrate edge-triggered hard drop.
+
+Prerequisite: Milestone 2.1 completion and closure.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify H02, H02, A07, H03. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 2.3 — Contact timing and regression
+
+Outcome and integration: Implement full grounded-interval locking; Integrate contact deadlines with input and Hold; Verify and document enhanced browser gameplay.
+
+Prerequisite: Milestone 2.2 completion and closure.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify H04, A08, B05, H01, H03–H04, A06–A09. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 2.4 — Phase review
+
+Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess H01–H04, A06–A09 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.2.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
