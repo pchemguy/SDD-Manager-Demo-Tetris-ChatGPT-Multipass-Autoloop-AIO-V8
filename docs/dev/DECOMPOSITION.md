@@ -13,6 +13,7 @@ Components refine the blocks in [ARCHITECTURE](ARCHITECTURE.md). Their interface
 | GameController | Orders commands and due simulation events; owns held-key repeat and suspension anchors. | Session transitions and monotonic clock samples; no board writes. | Exact deadlines, focus gaps and keyup/repeat ordering. |
 | GameView | Draws Canvas from snapshots; owns DOM status/instructions/restart event binding. | Read-only snapshots and controller commands; no collision rules. | Browser input/status and screenshot inspection. |
 | LandingSolver | Computes projected landing cells without mutating the board or consuming time. | Geometry plus occupancy; GameSession and GameView consume the same result. | Drop/ghost agreement and obstruction boundaries. |
+| GhostVisibility | Classifies projected occupied cells relative to the midline; never changes the target. | LandingSolver result and selected display mode when configurable. | Upper/lower/straddling fixtures. |
 
 ## Collaboration and lifecycle
 
