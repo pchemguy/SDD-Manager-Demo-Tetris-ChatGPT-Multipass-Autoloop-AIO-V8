@@ -20,11 +20,11 @@ A lock writes exactly four in-board, non-overlapping cells atomically. Remove ev
 
 ## B04 — Basic movement policies
 
-An ordinary piece cannot move through occupied cells. A clockwise rotation that fails its initial placement is rejected. Choose each new kind independently with equal probability from the seven kinds, using an injected random sample in [0,1). Lock on any failed downward attempt, whether gravity or soft drop. These policies apply to the classic gameplay profile.
+An ordinary piece cannot move through occupied cells. Enhanced gameplay uses H01 randomization, H02 rotation correction and H04 locking. Ordinary collision boundaries remain in force; mode-specific traversal may be defined separately. The 0.1.0 classic delivery profile uses independent uniform kind selection, rejects an initially blocked rotation and locks on failed down; that bounded delivery acceptance is preserved in PLAN.
 
 ## B05 — Clock, suspension and event order
 
-The application uses monotonic elapsed simulation time, never wall-clock calendar time. Hidden or unfocused documents suspend the game and clear held keys. Restore focus/visibility with a fresh clock anchor; do not advance by the hidden interval or resume held repeat without a new keydown. Process due scheduled events before a user command at the same simulation timestamp. At a shared deadline, gravity precedes key-repeat; stale events for a replaced piece are discarded. Process events in timestamp order so frame rate does not determine the result. Application integration owns this ordering.
+The application uses monotonic elapsed simulation time, never wall-clock calendar time. Hidden or unfocused documents suspend the game and clear held keys. Restore focus/visibility with a fresh clock anchor; do not advance by the hidden interval or resume held repeat without a new keydown. Process due scheduled events before a user command at the same simulation timestamp. At a shared deadline, lock expiry precedes gravity, then key-repeat; stale events for a replaced piece are discarded. Process events in timestamp order so frame rate does not determine the result. Application integration owns this ordering.
 
 ## B06 — View, controls and failures
 
@@ -39,3 +39,39 @@ Draw the board and current piece with distinct non-white colors, cell boundaries
 | A03 | Single, adjacent and separated multiple-row clears compact correctly and award the exact table score. |
 | A04 | Blocked spawn produces visible game over; Restart removes all prior board/score/input state. |
 | A05 | Chromium and Firefox headless interaction validates keyboard movement, rotation, soft drop, status, focus suspension and restart; inspect representative screenshots for clipping/readability. |
+
+## H01 — Seven-bag and Hold
+
+PieceStream shuffles exactly I,J,L,O,S,T,Z using Fisher–Yates: for i=6 down to 1 choose j=floor(r×(i+1)) for r in [0,1), then swap. Consume all seven before refilling. H01 supplies randomization for enhanced gameplay. A C or Shift edge-triggered command holds once until the active piece locks. Empty Hold stores the active kind and consumes the next stream kind; nonempty Hold swaps without advancing the stream. Incoming pieces use spawn orientation/position and fresh timing; a failed spawn causes game over. Only a successful Hold sets hold-used. Show the held kind; rejected/repeated commands consume nothing. Restart empties Hold and resets its usage flag.
+
+## H02 — Wall kicks and landing
+
+Orientations are 0, R, 2, L in clockwise order. For a clockwise rotation, try the following ordered mask-origin offsets relative to basic rotation, in B01 coordinates (positive y downward); accept the first legal candidate or reject unchanged. O rotation is a no-op. No counterclockwise or 180-degree command is required.
+
+| Transition | J, L, S, T, Z offsets | I offsets |
+| --- | --- | --- |
+| 0 → R | (0,0), (-1,0), (-1,-1), (0,2), (-1,2) | (0,0), (-2,0), (1,0), (-2,1), (1,-2) |
+| R → 2 | (0,0), (1,0), (1,1), (0,-2), (1,-2) | (0,0), (-1,0), (2,0), (-1,-2), (2,1) |
+| 2 → L | (0,0), (1,0), (1,-1), (0,2), (1,2) | (0,0), (2,0), (-1,0), (2,-1), (-1,2) |
+| L → 0 | (0,0), (-1,0), (-1,1), (0,-2), (-1,-2) | (0,0), (1,0), (-2,0), (1,2), (-2,-1) |
+
+Offset reference: [author-published SRS data](https://gist.github.com/Shuflduf/e5186328dce8ab7d38a16d73971abcee). The explicit table is the contract; there is no external runtime dependency.
+
+ Normal landing is the greatest downward displacement reachable by consecutive legal down moves before the first blocked move. LandingSolver returns exact occupied cells; ghost and hard drop consume the same result. Ghost draws behind the active piece with a distinct translucent/outline style and cannot obscure settled cells. The always-visible ghost is not a second active piece.
+
+## H03 — Hard drop
+
+Space is edge-triggered hard drop. Move the piece directly to its computed landing without intermediate board writes. Repeated browser key events are ignored. A newly grounded piece starts its normal grounded timer; a zero-distance hard drop on an already grounded piece retains elapsed contact time. Hard drop does not itself imply immediate lock. Drop awards no score.
+
+## H04 — Grounded interval locking
+
+Enhanced gameplay uses a full 1000 ms contact interval instead of the basic failed-down lock. Start the contact deadline when a spawn, move, rotation or drop first has no permitted downward progress. Grounded lateral movement, rotation, failed down and zero-distance hard drop do not reset it. Becoming airborne cancels the deadline; a later contact starts a fresh full interval. Lock at the exact deadline only if the current piece is legally grounded. Suspension freezes elapsed contact time. Hold creates a new piece with new timing and invalidates the old deadline. Basic geometry/scoring/suspension remain applicable; enhanced kick/random/lock policies govern where specified.
+
+## Enhanced acceptance
+
+| ID | Observable condition / evidence to obtain |
+| --- | --- |
+| A06 | Every aligned seven-piece bag is a permutation; boundary refill and Hold stream consumption are exact. |
+| A07 | Kicks choose the first legal offset or leave rotation unchanged; ghost cells equal hard-drop cells for all shapes and obstruction fixtures. |
+| A08 | Contact at t locks at t+1000, not the next partial gravity tick; grounded moves/failed down/drop do not reset; airborne and Hold cancel old deadlines. |
+| A09 | Browser checks exercise Hold once-per-piece, hard drop and ghost, plus classic scoring/game-over/restart and focus regressions. |
