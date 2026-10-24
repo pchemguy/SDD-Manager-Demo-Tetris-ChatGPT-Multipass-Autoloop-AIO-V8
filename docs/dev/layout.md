@@ -15,6 +15,7 @@ Source, test, tooling, user-document and distribution paths below are planned al
 | Ghost visibility | src/domain/ghost-visibility.ts | Pure occupied-cell predicate; browser view renders it. | tests/unit/ midline fixtures; tests/browser/ghost.spec.ts |
 | Penetrator behavior | Existing landing.ts, geometry.ts, session.ts, controller.ts and game-view.ts | Mode/inventory rules stay in session; landing module owns both modes. | tests/unit/ cavity fixtures; tests/browser/penetrator.spec.ts |
 | Configuration and settings UI | src/app/configuration.ts; src/browser/settings-view.ts; docs/user/SETTINGS.md | Validated selected state vs per-piece snapshots; ordinary HTML controls. | tests/unit/ settings; tests/browser/configuration.spec.ts |
+| Persistence adapters | src/browser/settings-persistence.ts | Cookie/URL/history access only; Configuration retains codecs/selected state. | tests/integration/ fake platform ports; tests/browser/persistence.spec.ts |
 
 ## Shared paths and generated artifacts
 
