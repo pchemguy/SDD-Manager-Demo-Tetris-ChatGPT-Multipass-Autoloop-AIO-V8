@@ -19,6 +19,7 @@ The game session is the authoritative owner of settled board cells, active piece
 - The domain owns piece-stream state, held piece, landing projection and lock/contact state. One projection feeds ghost display and hard drop; neither renderer nor keyboard code duplicates collision logic.
 - Visibility is a projection predicate, separate from solving the landing. Hiding the ghost never changes the drop target.
 - Domain landing rules distinguish normal collision barriers from penetrator traversal. Bonus inventory and active-piece mode belong to the game session; only its legal-lock transaction changes settled cells and awards bonuses.
+- A configuration model owns selected settings; each spawned/swapped piece snapshots timing policies. The view exposes pending timing changes. Immediate flags are read at command/render boundaries. Next preview reads the stream without consuming it. Domain policy value types live with domain values; the controller passes snapshots, so GameSession never imports the application Configuration module.
 
 ## Timing and failure boundaries
 
