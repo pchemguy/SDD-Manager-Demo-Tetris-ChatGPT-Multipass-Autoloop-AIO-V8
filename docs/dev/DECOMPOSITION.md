@@ -14,6 +14,8 @@ Components refine the blocks in [ARCHITECTURE](ARCHITECTURE.md). Their interface
 | GameView | Draws Canvas from snapshots; owns DOM status/instructions/restart event binding. | Read-only snapshots and controller commands; no collision rules. | Browser input/status and screenshot inspection. |
 | LandingSolver | Computes projected landing cells without mutating the board or consuming time. | Geometry plus occupancy; GameSession and GameView consume the same result. | Drop/ghost agreement and obstruction boundaries. |
 | GhostVisibility | Classifies projected occupied cells relative to the midline; never changes the target. | LandingSolver result and selected display mode when configurable. | Upper/lower/straddling fixtures. |
+| Configuration | Owns validated selected settings and defaults; distinguishes immediate flags from per-piece timing snapshots. | Typed setting changes; GameController, GameSession and SettingsView consume it. | Mid-piece change, disabled commands, restart and reload fixtures. |
+| SettingsView | Renders six labeled controls, pending-policy status and next preview. | Configuration and stream peek; sends changes through controller. | Keyboard focus, controls and preview does not consume stream. |
 
 ## Collaboration and lifecycle
 
