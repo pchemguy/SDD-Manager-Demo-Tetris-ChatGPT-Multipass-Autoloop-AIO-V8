@@ -22,7 +22,7 @@ Outcome and integration: Establish TypeScript tooling and isolated browser diagn
 
 Prerequisite: phase entry gate.
 
-Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify B01–B06, B01, B01, B04, B03. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. A standalone review task follows the four delivery tasks.
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify B01 geometry, B03 placement/compaction/scoring (excluding next-spawn integration), B04 rotation and independent sampling, and B06 browser provisioning only. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. A standalone review task follows the four delivery tasks.
 
 ### Milestone 1.2 — Playable session
 
@@ -30,7 +30,7 @@ Outcome and integration: Implement session spawn, gravity, lock and restart tran
 
 Prerequisite: Milestone 1.1 completion and closure.
 
-Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify B02–B05, B06, B02, B05. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify B02 session/input/gravity, B03 lock-to-spawn integration, B04 failed-down locking, B05 ordering/suspension and B06 core view. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
 
 ### Milestone 1.3 — Browser acceptance and distribution
 
@@ -38,7 +38,7 @@ Outcome and integration: Exercise complete classic sessions in both browsers; Ve
 
 Prerequisite: Milestone 1.2 completion and closure.
 
-Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify A01–A05, B06, A05. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify B06 desktop usability and A01–A05 integrated classic acceptance. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
 
 ### Milestone 1.4 — Phase review
 
