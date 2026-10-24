@@ -6,8 +6,8 @@ Current control and decision evidence; [DOCS_TASKS](DOCS_TASKS.md) owns checkbox
 
 - Mode and source: autodoc/autoloop, explicitly requested for six cumulative scopes in the project seed.
 - Multipass delivery mode: strict, the default; no flexible integration permission was supplied. Once established, earlier phase/task IDs, scope, milestone membership, ordering, dependencies and exits remain unchanged. Later scope is appended through bounded delivery increments.
-- Current pass: 1, playable classic baseline; PROJECT proposal is ready for first human review.
-- Approval basis: first PROJECT approval remains pending. On its approval, ARCHITECTURE through TASKS and later PROJECT checkpoints are preapproved by the selected mode; later PROJECT approvals are waived, as announced before this checkpoint. New material later decisions are delegated to agent judgment with visible rationale and retained evidence.
+- Current pass: 1, playable classic baseline; PROJECT accepted; continue with ARCHITECTURE.
+- Approval basis: first PROJECT and the proposed interaction rules approved by the user’s “Approve” response to proposal commit `f2e0d763ee168a52b5decff47e802552d23795cc`. Accordingly, ARCHITECTURE through TASKS and later PROJECT checkpoints are preapproved by the selected mode; later PROJECT approvals are waived, as announced before this checkpoint. New material later decisions are delegated to agent judgment with visible rationale and retained evidence.
 - Tracking: enabled for documentation and implementation by existing root AGENTS policy. Documentation milestone 1 (`sdd-docs-main`) and issues #1–#9 were created and read back against the bundled standard definitions before any repository modification.
 - Publication: every owned commit must be pushed/read back before further work. Main preparation stays on `design-docs/main`.
 - Stop: after pass 6 DOCS-008 publication/issue closure; leave DOCS-009 and its issue and milestone open. No whole-package QC, documentation integration, implementation activation or product release is selected by this request.
@@ -24,7 +24,7 @@ Current control and decision evidence; [DOCS_TASKS](DOCS_TASKS.md) owns checkbox
 
 ## Per-pass decisions
 
-All entries below originate during pass 1 exploration. User-specified capabilities are requirements; additional resolutions are agent proposals awaiting first PROJECT/exploration approval. Approval of these proposals does not adopt future capabilities into the baseline brief. After approval, retain the decision basis and carry the applicable decisions into later passes.
+All entries below originate during pass 1 exploration. User-specified capabilities are requirements; additional resolutions were agent proposals accepted by the user’s “Approve” response on 2026-10-24. This confirms the stated cross-scope rules without adopting future capabilities into the baseline brief. “Proposed” in the retained source/basis cells identifies authorship; each applicable resolution is accepted.
 
 | Pass / decision | Resolution and rationale | Basis / source | Applicability / status |
 | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ All entries below originate during pass 1 exploration. User-specified capabiliti
 | Task | Current evidence / decision basis |
 | --- | --- |
 | DOCS-001 | Initialization commit `a8a958614771408144432618bc4e9f82ef8cecfc` published and exact remote ref verified. Four pre-existing root files preserved against initial commit `3cec5836208ffe62881ab5f4aec809152c962bdb`; records and checked DOCS-001 committed together. Issue #1 closed as completed and read back. |
-| DOCS-002 | Pass 1 [PROJECT proposal](PROJECT.md), SHA-256 `e7cbdb66fe1b201a43f30235956314927b54636c7076e6da227f488faf46797e`; human acceptance pending. Owner QC: complete classic seed coverage; no future additions adopted; scope/non-goals and proposals distinguishable; README disclosure/usage links resolve; principal-scope depth retained. Detailed contracts and browser execution not assessed. DOCS-002 remains unchecked and issue #2 open. |
+| DOCS-002 | Pass 1 [PROJECT proposal](PROJECT.md), SHA-256 `e7cbdb66fe1b201a43f30235956314927b54636c7076e6da227f488faf46797e`; human accepted the unchanged proposed bytes via “Approve” on 2026-10-24. Owner QC: complete classic seed coverage; no future additions adopted; scope/non-goals and proposals distinguishable; README disclosure/usage links resolve; principal-scope depth retained. Detailed contracts and browser execution not assessed. DOCS-002 closes in this acceptance commit; subsequent publication and issue #2 closure require readback. |
 | DOCS-003 | Not started; depends on first PROJECT approval. |
 | DOCS-004 | Not started. |
 | DOCS-005 | Not started. |
@@ -70,7 +70,7 @@ All entries below originate during pass 1 exploration. User-specified capabiliti
 | DOCS-008 | Not started. |
 | DOCS-009 | Not selected; remains pending after final autoloop pass. |
 
-Material unresolved decisions: the proposed exploration choices above and first PROJECT approval. No implementation is authorized.
+Material unresolved decisions: none blocking current document authoring. Agent-resolved contract precision remains delegated. No implementation is authorized.
 
 ## Initialization and current reset
 
@@ -84,4 +84,4 @@ Material unresolved decisions: the proposed exploration choices above and first 
 
 ## Pending transitions
 
-Publish/read back the pass 1 PROJECT proposal, then await first human acceptance of PROJECT and the proposed exploration decisions above. No ARCHITECTURE before that acceptance. Issue #2 and DOCS-002 remain open/unchecked. The proposal publication result is recoverable from its containing commit and exact remote readback; reconcile actual Git/hosted state on resume.
+Publish/read back the PROJECT acceptance commit and close/read back issue #2. Next author ARCHITECTURE under autodoc preapproval. No further human checkpoint within the six agreed passes; technical, publication and hosted-state gates remain active.
