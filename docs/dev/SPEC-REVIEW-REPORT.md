@@ -55,3 +55,24 @@ Scope: cumulative product state through Conditional ghost visibility; owner conf
 Geometry/movement/transactions → Geometry, Board, GameSession; input/time/suspension → GameController; rendering/status → GameView. H01–H04 → PieceStream, LandingSolver and contact/Hold lifecycle; G01 → GhostVisibility; End-to-end success, rejection, timing, restart and browser acceptance map to the named owners. No contract requires a hidden browser-global dependency in the domain.
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 4
+
+Scope: cumulative product state through Penetrator mode; owner conformance review.
+
+- SPEC.md: SHA-256 `df64660f8bc63042f389bcefc611fdb046c65f0e1ee6f4ace0bdb807e351b806`.
+- PROJECT.md: SHA-256 `0223212f979446e67e70b1421a4c04d2a162d4b72d3f0e8a08992768dda2257a`.
+- ARCHITECTURE.md: SHA-256 `f7cf1ee36b42645eb9456be243edf2887eaa5d2b4b6f110a64eae6de3acbeedc`.
+- DECOMPOSITION.md: SHA-256 `de2ce7c73c91a3e363d224a1f6f27126a7846be56b8be1eb986ec112e2c3cf26`.
+
+Geometry/movement/transactions → Geometry, Board, GameSession; input/time/suspension → GameController; rendering/status → GameView. H01–H04 → PieceStream, LandingSolver and contact/Hold lifecycle; G01 → GhostVisibility; P01–P03 → mode-aware solver/session inventory and legal Board transaction; End-to-end success, rejection, timing, restart and browser acceptance map to the named owners. No contract requires a hidden browser-global dependency in the domain.
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+### Finding SPEC-F01 — Rejection versus locking
+
+Earlier B02/A01 generic rejection wording could include a blocked downward attempt even though B04 allows that attempt to lock; command timing wording could also include replacement by Hold. sdd-specify qualified lateral/rotation rejection and current-piece gravity scheduling, preserving the explicit downward locking and new-piece timing contracts. Recheck: failed down can legally write a lock; rejected lateral/rotation candidates cannot. Disposition: resolved without changing protected phase/task scope.
+
+### Finding SPEC-F02 — Active color exception
+
+B06 broadly described non-white current pieces; P01 requires white active penetrators. sdd-specify explicitly limits B06 to regular cells and routes active ability color to P01. Recheck: regular/settled cells remain non-white, active penetrators white. Disposition: resolved.

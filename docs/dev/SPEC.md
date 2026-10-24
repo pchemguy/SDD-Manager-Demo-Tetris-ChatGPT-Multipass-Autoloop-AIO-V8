@@ -12,7 +12,7 @@ Use columns x=0..9 and rows y=0..19, increasing right/down. Empty cells and occu
 
 Start playing with an empty board, score zero and one spawned piece. Left/Right move one column, Up rotates clockwise, Down soft-drops one row, and the HTML Restart action starts a fresh game. A non-repeat keydown acts once; browser autorepeat events are ignored. Held lateral/Down keys repeat after 150 ms, then every 50 ms; the most recently pressed lateral direction wins. Rotation is edge-triggered. Gameplay keys prevent page scrolling only while the game surface owns focus; controls retain normal keyboard behavior.
 
-Gravity attempts one downward row every 1000 ms of active simulation time, first due 1000 ms after each spawn; there are no levels or automatic speed increases. Commands do not postpone gravity. Invalid movement/rotation leaves state unchanged. Restart clears the board, score, active/held-input state and stream state. A spawn overlapping settled cells ends the game; gameplay commands then have no effect. Restart is always available. GameSession owns status and spawn; GameController owns ordered input/time.
+Gravity attempts one downward row every 1000 ms of active simulation time, first due 1000 ms after each spawn; there are no levels or automatic speed increases. Commands that retain the current piece do not postpone its gravity schedule. Rejected lateral movement/rotation leaves state unchanged; a failed downward attempt obeys the effective locking policy. Restart clears the board, score, active/held-input state and stream state. A spawn overlapping settled cells ends the game; gameplay commands then have no effect. Restart is always available. GameSession owns status and spawn; GameController owns ordered input/time.
 
 ## B03 — Legal lock, clearing and score
 
@@ -28,13 +28,13 @@ The application uses monotonic elapsed simulation time, never wall-clock calenda
 
 ## B06 — View, controls and failures
 
-Draw the board and current piece with distinct non-white colors, cell boundaries and readable score/status. Show keyboard instructions, game-over status and Restart. HTML controls have labels and visible focus. At a 1280×800 desktop viewport, board and core controls must be usable without clipping; resizing cannot mutate game state. Focus suspension is visible. No multiplayer, accounts, audio or touch interface is required. No runtime game-state persistence is required. Browser provisioning and required Chromium/Firefox checks follow the root policy; failures are reported rather than silently skipped.
+Use distinct non-white kind colors for regular cells; P01 defines white active penetrator rendering. Show cell boundaries and readable score/status. Show keyboard instructions, game-over status and Restart. HTML controls have labels and visible focus. At a 1280×800 desktop viewport, board and core controls must be usable without clipping; resizing cannot mutate game state. Focus suspension is visible. No multiplayer, accounts, audio or touch interface is required. No runtime game-state persistence is required. Browser provisioning and required Chromium/Firefox checks follow the root policy; failures are reported rather than silently skipped.
 
 ## Core acceptance
 
 | ID | Observable condition / evidence to obtain |
 | --- | --- |
-| A01 | Each shape spawns and rotates; wall/floor/occupied collisions reject illegal ordinary moves without changing settled cells. |
+| A01 | Each shape spawns and rotates; wall/floor/occupied collisions reject illegal lateral/rotation candidates; failed down obeys the locking policy. |
 | A02 | Explicit clock and input fixtures reproduce gravity, repeat, suspension and shared-deadline ordering. |
 | A03 | Single, adjacent and separated multiple-row clears compact correctly and award the exact table score. |
 | A04 | Blocked spawn produces visible game over; Restart removes all prior board/score/input state. |
@@ -81,3 +81,19 @@ Enhanced gameplay uses a full 1000 ms contact interval instead of the basic fail
 Compute landing even when hidden. Under dynamic visibility, draw the ghost only if `min(projected occupied y) >= 10`. Thus a straddling piece and any piece with a cell above row 10 are hidden; a piece whose highest cell is row 10 is shown. Re-evaluate after every position/orientation/board change. Visibility has no effect on drop, input, collision or lock time. GhostVisibility owns classification; GameView consumes it.
 
 Acceptance A10: fixtures with highest projected rows 9, 10 and 11, including tall/straddling shapes and transitions in both directions, verify visibility and unchanged landing/timing. Repeat a representative browser interaction and screenshot.
+
+## P01 — Activation and inventory
+
+Start each game with zero bonuses. A four-row clear in one legal lock transaction awards one bonus, capped at three; other clears award none. Show exactly one lightning symbol per available bonus, with a numeric accessible label. A P keydown activates the current ordinary piece only while playing and at least one bonus exists. Successful activation subtracts exactly one and marks this piece penetrator until lock; repeated activation or unavailable bonus is a no-op. Show its four active cells entirely white. Regular active/settled/Hold/next pieces must not be white. The visible penetrator ghost conveys white status with a distinct outline/translucency. After locking, store a non-white ordinary kind color; white denotes active ability rather than permanent board state. Hold commands are disabled while active penetrator, irrespective of the general Hold flag, and do not spend or change anything.
+
+## P02 — Traversal and terminal placement
+
+For a penetrator candidate origin/orientation, examine all downward origins at or below its current row whose occupied cells are in bounds, ignoring occupied cells between candidates; select the greatest y whose four cells do not overlap settled cells. This terminal legal placement defines grounded contact. Gravity/soft drop move one row at a time through occupied cells toward it, and stop at it. Hard drop jumps directly to it. Ghost uses it before applying visibility. Normal pieces retain ordinary first-obstruction landing.
+
+Penetrator translations and rotation kick candidates may overlap occupied cells, but their occupied cells must stay in bounds and a collision-free terminal placement at or below the candidate row must exist. Test kick candidates in H02 order using this legality. If none exists, reject the command without movement. Activation of a legal ordinary position always has at least that position as a terminal candidate. Recompute after movement/rotation/activation. Retain grounded elapsed time only if it stays grounded; clear it if the terminal target moves below. No legal terminal target is a rejected candidate, never permission to overlap on lock.
+
+## P03 — Lock and reward transaction
+
+Only the terminal in-board collision-free position may lock. No failed down or expired deadline may write an overlapping placement. Intermediate overlap neither removes nor changes settled cells; draw the active piece above settled visuals. At lock, clear penetrator status, place four kind-colored cells, clear rows/award score and bonus, update the indicator, then spawn an ordinary piece with Hold available. Game over/restart clear stale deadlines; restart resets bonuses and mode. P01/P02 belong to GameSession/LandingSolver, with Board retaining legal-placement enforcement.
+
+Acceptance A11: adversarial sealed cavities, several blocked layers, a legal target above the floor and no-valid-target move/rotation fixtures prove traversal, legal terminal locking and ghost/drop agreement. A12: zero/one/three bonuses, repeated activation, four-line awards at cap, active Hold rejection, white active rendering and restart exercise transaction and browser UI boundaries.
