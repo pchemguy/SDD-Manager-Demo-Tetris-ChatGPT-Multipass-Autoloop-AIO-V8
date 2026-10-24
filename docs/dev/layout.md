@@ -11,6 +11,7 @@ Source, test, tooling, user-document and distribution paths below are planned al
 | Browser presentation/bootstrap | src/browser/main.ts, game-view.ts, styles.css; index.html | Composition, key/lifecycle adapters, Canvas and HTML. | tests/browser/ with isolated fixtures |
 | Build and checks | package.json, lockfile, tsconfig.json, vite.config.ts, playwright.config.ts | Pinned dev dependencies, build and isolated browser projects. | Type/build and browser setup diagnostics |
 | Documentation and distribution | README.md, docs/user/CONTROLS.md; dist/ (generated) | Validated user/developer commands, controls, static build. | Built-page smoke and documented command readback |
+| Landing and enhanced controls | src/domain/landing.ts; existing session/stream/controller/view modules | Canonical landing, bag/Hold and timing remain with their logical owners. | tests/unit/ landing/bag/kick; tests/browser/enhanced.spec.ts |
 
 ## Shared paths and generated artifacts
 

@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: **Ready** for strategy only; layout coverage pending; TASKS blocked. Current identities and criteria are in the latest review section below. Human acceptance/preapproval is retained separately in DOCS_PREPARATION.
+State: **Ready** for the reviewed document scope. Current identities and criteria are in the latest review section below. Human acceptance/preapproval is retained separately in DOCS_PREPARATION.
 
 ## Initial review
 
@@ -74,6 +74,26 @@ Scope: cumulative product state through Gameplay enhancements; owner conformance
 - DECOMPOSITION.md: SHA-256 `64266f02aa79df66efa4301ece6133bfd75db139419a3b8853d2b8cdc227971e`.
 
 Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Strategy-only gate: physical layout assessment is pending and TASKS remains blocked until combined PLAN/layout review.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 4
+
+Scope: cumulative product state through Gameplay enhancements; combined PLAN/layout review.
+
+- PLAN.md: SHA-256 `78265ed626ebe5f68e1a831f47eba39a10c1110a6035bca2e39b7fde3bdd3185`.
+- SPEC.md: SHA-256 `4a71fc23fe2bfb986ff51348eb4f6e2e30991aa59fcf281b2482ec7a2b1b6c0d`.
+- SPEC-REVIEW-REPORT.md: SHA-256 `06c0ed92f2340b555f869c7f1f51c5271f3a80c4d58eae5cc2514e232b215233`.
+- ARCHITECTURE.md: SHA-256 `044eee949727cb52ab9b3c913da77c319bb38d67f1cc4991f4d082dd92d55a90`.
+- DECOMPOSITION.md: SHA-256 `64266f02aa79df66efa4301ece6133bfd75db139419a3b8853d2b8cdc227971e`.
+- layout.md: SHA-256 `421b35f0586d932f978cedd19aa20c36dfb9f8bf7fad9ef345d557ec98a818d1`.
+
+Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Physical component/test/fixture/build/document ownership supports each route; no ambiguous source owner remains.
 
 | Group | Delivery count | Excluded review units | Assessment |
 | --- | --- | --- | --- |
