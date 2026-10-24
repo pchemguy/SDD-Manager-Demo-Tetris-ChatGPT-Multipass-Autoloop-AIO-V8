@@ -14,6 +14,7 @@ Source, test, tooling, user-document and distribution paths below are planned al
 | Landing and enhanced controls | src/domain/landing.ts; existing session/stream/controller/view modules | Canonical landing, bag/Hold and timing remain with their logical owners. | tests/unit/ landing/bag/kick; tests/browser/enhanced.spec.ts |
 | Ghost visibility | src/domain/ghost-visibility.ts | Pure occupied-cell predicate; browser view renders it. | tests/unit/ midline fixtures; tests/browser/ghost.spec.ts |
 | Penetrator behavior | Existing landing.ts, geometry.ts, session.ts, controller.ts and game-view.ts | Mode/inventory rules stay in session; landing module owns both modes. | tests/unit/ cavity fixtures; tests/browser/penetrator.spec.ts |
+| Configuration and settings UI | src/app/configuration.ts; src/browser/settings-view.ts; docs/user/SETTINGS.md | Validated selected state vs per-piece snapshots; ordinary HTML controls. | tests/unit/ settings; tests/browser/configuration.spec.ts |
 
 ## Shared paths and generated artifacts
 
