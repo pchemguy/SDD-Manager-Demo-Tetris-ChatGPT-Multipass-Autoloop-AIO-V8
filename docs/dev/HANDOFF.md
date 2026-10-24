@@ -1,32 +1,28 @@
 # Project handoff
 
-Checkpoint: repository initialization for main preparation, before first PROJECT approval.
+Checkpoint: DOCS-008 accepted for scope 1 — Playable classic baseline.
 
-Outcome: all four existing root SDD files retained; default manual provenance scaffold merged and published to main; documentation tracking verified. This snapshot's containing commit identifies initialization; later records and Git determine subsequent progress.
+Outcome: Current-scope roots through TASKS and required owner QC are prepared under recorded preapproval; no product implementation is claimed.
 
 ## Workflow and sources
 
-- Main development, greenfield document preparation; coordinator sdd-manage and next owner sdd-design.
-- Governing records: [preparation control and decisions](DOCS_PREPARATION.md), [documentation tasks](DOCS_TASKS.md), root [AGENTS](../../AGENTS.md), [browser policy](../../BROWSER_DEV_POLICY.md), and repository-bundled [SDD Manager](../../.agents/plugins/sdd-manager/PLUGIN.md) 0.15.2.
-- Git, Node 24.22.1 and Python 3.12.14 available on Linux. Browser/dependency provisioning is not yet tested or selected.
+- Main development/document preparation, sdd-manage coordinator. Read [DOCS_PREPARATION](DOCS_PREPARATION.md) for current mode, scope sequence, decisions and acceptance/QC evidence and [DOCS_TASKS](DOCS_TASKS.md) for checks.
+- Product sources: [PROJECT](PROJECT.md), [ARCHITECTURE](ARCHITECTURE.md), [DECOMPOSITION](DECOMPOSITION.md), [SPEC](SPEC.md), [PLAN](PLAN.md), [layout](layout.md), [TASKS](TASKS.md). Adjacent SPEC/PLAN/TASKS review reports own per-document readiness.
+- Repository-bundled SDD Manager 0.15.2; Git, Node and Python available. Application/browser provisioning remains unverified; follow root browser policy during authorized implementation.
 
-## Scope and human decisions
+## Scope and decisions
 
-- User requested six predefined cumulative passes in autodoc/autoloop; strict multipass default applies.
-- First PROJECT approval remains active. Later PROJECT approvals are waived, as announced; later document checkpoints and autoloop resets follow the selected mode after first approval.
-- Stop after final pass DOCS-008, before DOCS-009, package integration or implementation. Releases are required only for subsequently authorized completed, verified and integrated implementation phases.
-- Tracking enabled by root policy; milestone 1 and issues #1–#9 verified. Standard reporting; every owned commit published/read back.
-- Cross-scope resolutions remain proposals in DOCS_PREPARATION awaiting first exploration/brief approval.
+- User approved first PROJECT and interaction proposals via “Approve” on 2026-10-24; subsequent document checkpoints/later PROJECT approvals are preapproved under requested autodoc/autoloop. Later contract details are delegated agent decisions retained in DOCS_PREPARATION.
+- Strict multipass: earlier phase/task blocks are protected byte-for-byte. Only new scope is appended to delivery ranges.
+- Stop after scope 6 DOCS-008. DOCS-009, package integration, implementation activation and product releases remain unselected. Future authorized implementation phases require releases after verified integration.
+- Existing root policy enables tracking. Same milestone 1/issues #1–#9 retained; every commit pushed/read back. Standard reporting.
 
 ## Branches and return
 
-- Working branch: `design-docs/main`.
-- Creation parent and future integration target: actual default branch `main`.
-- Branch-off commit: `5bc22f5535bff34275d6d7c672ed81e25471ed4b`.
-- Provenance branch `design-docs/ai-logs` retained; its scaffold is integrated. Manual future log changes are not automatic continuation work.
-- Suspended parent: none.
+- Working branch: design-docs/main; creation parent/future integration target: main.
+- Branch-off: 5bc22f5535bff34275d6d7c672ed81e25471ed4b. Provenance scaffold already integrated; no suspended parent.
 
-## Pending work and next action
+## Pending effects and next action
 
-- This initialization commit requires push/readback, then evidence/closure/readback for DOCS-001 issue #1. Reconcile those later effects before repeating them.
-- Next eligible action: publish the baseline PROJECT proposal, retaining DOCS-002 unchecked, and stop for first approval before ARCHITECTURE. Later evidence belongs in DOCS_PREPARATION; this checkpoint need not be refreshed per document.
+- Publish/read back this checkpoint; then close/read back DOCS-008 issue #8; milestone and DOCS-009 remain open.
+- Next: perform the next agreed scope reset. Later Git/hosted effects must be reconciled rather than inferred from this snapshot.
