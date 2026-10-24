@@ -172,3 +172,34 @@ The [PLAN](PLAN.md) owns strategic outcomes/exits, [SPEC](SPEC.md) owns behavior
             Depends on: all Phase 5 delivery milestones completed and closed; final boundary T-039.
             Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.5.0 release preparation.
             Evidence: commit docs/dev/reports/phases/5/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.
+
+## Phase 6 — Persistent configuration
+
+- [ ] Phase 6 — Persistent configuration
+    - [ ] Milestone 6.1 — Source resolution and initialization
+        - [ ] T-041 — Implement finite settings codecs and candidate parsing
+            Scope: src/browser/settings-persistence.ts, src/app/configuration.ts; fixtures. Depends on: T-040.
+            Contracts: S01. Evidence: Exact tokens, empty/wrong-case/malformed/duplicate candidates stay isolated per setting.
+        - [ ] T-042 — Resolve URL, cookie and default values independently
+            Scope: src/browser/settings-persistence.ts, src/browser/main.ts; integration tests. Depends on: T-041.
+            Contracts: S01–S02. Evidence: Mixed-source precedence resolves before first piece; omission retains cookie; valid explicit defaults write cookies.
+        - [ ] T-043 — Integrate cookie lifetime and initialization failure status
+            Scope: src/browser/settings-persistence.ts, settings-view.ts; adapter tests. Depends on: T-042.
+            Contracts: S02–S03. Evidence: Use specified cookie attributes, guarded reads/writes and non-blocking warning without erasing other values.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/6/6.1.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-041, T-042.
+    - [ ] Milestone 6.2 — Synchronization and reload acceptance
+        - [ ] T-044 — Synchronize selected changes to cookies and URL
+            Scope: src/browser/settings-persistence.ts, src/app/controller.ts; fixtures. Depends on: T-043.
+            Contracts: S02. Evidence: Replace only selected key, remove its duplicates, preserve unrelated params/fragment/path and avoid navigation.
+        - [ ] T-045 — Contain partial persistence failures
+            Scope: src/browser/settings-persistence.ts, settings-view.ts; failure tests. Depends on: T-044.
+            Contracts: S03. Evidence: Cookie and History fail separately; other channel attempted, memory remains effective and warnings truthful.
+        - [ ] T-046 — Verify real-browser reload persistence and document settings
+            Scope: tests/browser/persistence.spec.ts, docs/user/SETTINGS.md, README.md. Depends on: T-045.
+            Contracts: A16–A18. Evidence: HTTP(S) Chromium/Firefox mixed-source, explicit-default, omitted-key, change/reload, invalid-input and failure checks; prepare release evidence.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/6/6.2.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-044, T-045.
+    - [ ] Milestone 6.3 — Phase review
+        - [ ] T-047 — Review and report Phase 6
+            Depends on: all Phase 6 delivery milestones completed and closed; final boundary T-046.
+            Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.6.0 release preparation.
+            Evidence: commit docs/dev/reports/phases/6/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. Also aggregate all unresolved/deferred findings in docs/dev/reports/IMPLEMENTATION-REPORT.md when the full list is complete. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.

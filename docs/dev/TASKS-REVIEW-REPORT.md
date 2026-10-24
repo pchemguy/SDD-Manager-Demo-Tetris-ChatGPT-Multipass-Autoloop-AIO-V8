@@ -175,3 +175,33 @@ Every milestone outcome has executable implementation/check/document work and as
 | 5.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 7
+
+Scope: cumulative product state through Configuration persistence; owner conformance review.
+
+- TASKS.md: SHA-256 `868087052d705cd1d53c57f92a2fd5a0a46ddd5ed9a8e70d451bc592dd529476`.
+- SPEC.md: SHA-256 `7b5dfb50a3900dd250d87a4c23062f202456b6012f15b738e064330679d472fe`.
+- PLAN.md: SHA-256 `544ead8667f757c21d6fdedc0cb6287f1d3c13722db4ba6f6056b88ab244012f`.
+- layout.md: SHA-256 `9ee8eeec731ee3b8f6c61301cff370394ac34791f54b69485cb57a81d76a248c`.
+- PLAN-REVIEW-REPORT.md: SHA-256 `ed074549a9ea3cc621ce201efb1f22c0a22fdda3091a682175992dea8a38eb52`.
+
+Every milestone outcome has executable implementation/check/document work and assigned review/report/HANDOFF evidence. Unique task IDs and feasible prerequisites preserve phase/milestone identity. Standalone milestone review occurs only for Milestone 1.1 (four delivery tasks and a phase with three delivery milestones); all other delivery milestones fold review into the final task. Each special phase review milestone contains exactly one task.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 4 tasks | One standalone milestone review | Bounded related modules; direct failure/integration checks and documentation included. |
+| 1.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 1.3 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 2.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 2.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 2.3 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 3.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 4.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 4.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 5.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 5.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 6.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 6.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.

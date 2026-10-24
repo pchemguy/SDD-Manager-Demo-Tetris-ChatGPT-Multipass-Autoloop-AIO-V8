@@ -1,8 +1,8 @@
 # Project handoff
 
-Checkpoint: autoloop cursor reset into scope 6 — Configuration persistence.
+Checkpoint: DOCS-008 accepted for scope 6 — Configuration persistence.
 
-Outcome: Retained all product documents; DOCS-002–009 unchecked for revision and same-issue reopening.
+Outcome: Current-scope roots through TASKS and required owner QC are prepared under recorded preapproval; no product implementation is claimed.
 
 ## Workflow and sources
 
@@ -24,5 +24,5 @@ Outcome: Retained all product documents; DOCS-002–009 unchecked for revision a
 
 ## Pending effects and next action
 
-- Publish/read back this checkpoint; then reopen/read back the same DOCS-002–009 issues and verify the milestone remains open before PROJECT revision.
-- Next: revise PROJECT after verified reopening. Later Git/hosted effects must be reconciled rather than inferred from this snapshot.
+- Publish/read back this checkpoint; then close/read back DOCS-008 issue #8; milestone and DOCS-009 remain open.
+- Next: return at the final DOCS-008 boundary, before package QC. Later Git/hosted effects must be reconciled rather than inferred from this snapshot.
