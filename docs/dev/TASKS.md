@@ -141,3 +141,34 @@ The [PLAN](PLAN.md) owns strategic outcomes/exits, [SPEC](SPEC.md) owns behavior
             Depends on: all Phase 4 delivery milestones completed and closed; final boundary T-032.
             Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.4.0 release preparation.
             Evidence: commit docs/dev/reports/phases/4/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.
+
+## Phase 5 — Session game configuration
+
+- [ ] Phase 5 — Session game configuration
+    - [ ] Milestone 5.1 — Configuration and controls
+        - [ ] T-034 — Implement typed session settings and defaults
+            Scope: src/app/configuration.ts; model tests. Depends on: T-033.
+            Contracts: C01. Evidence: Validate six finite value domains/defaults and preserve selected values across Restart.
+        - [ ] T-035 — Render six labeled side-panel controls
+            Scope: src/browser/settings-view.ts, styles.css; browser tests. Depends on: T-034.
+            Contracts: C01, A13. Evidence: Keyboard changes reach Configuration; controls show selected values and do not trigger gameplay keys.
+        - [ ] T-036 — Add non-consuming next preview and ghost display modes
+            Scope: src/browser/settings-view.ts, game-view.ts, src/domain/piece-stream.ts; tests. Depends on: T-035.
+            Contracts: C01–C02. Evidence: Peek never consumes a bag entry; hide/dynamic/show and preview on/off render exact state.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/5/5.1.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-034, T-035.
+    - [ ] Milestone 5.2 — Live application and session acceptance
+        - [ ] T-037 — Snapshot timing policies for each active piece
+            Scope: src/domain/session.ts, src/app/configuration.ts; time tests. Depends on: T-036.
+            Contracts: C02, A14. Evidence: Current timer unchanged on selection; next spawn/Hold/Restart snapshots policies and pending display clears.
+        - [ ] T-038 — Apply enable flags and failed/immediate locking
+            Scope: src/app/controller.ts, src/domain/session.ts, settings-view.ts; tests. Depends on: T-037.
+            Contracts: C02. Evidence: Disabled commands no-op; Hold retains kind; failed-down/general drop and immediate legal drop match contracts, including penetrators.
+        - [ ] T-039 — Verify session configuration and document semantics
+            Scope: tests/browser/configuration.spec.ts, docs/user/SETTINGS.md, README.md. Depends on: T-038.
+            Contracts: A13–A15. Evidence: Both browsers exercise every option, pending-policy timing, Restart retention and reload-to-default without storage/URL effects; prepare release evidence.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/5/5.2.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-037, T-038.
+    - [ ] Milestone 5.3 — Phase review
+        - [ ] T-040 — Review and report Phase 5
+            Depends on: all Phase 5 delivery milestones completed and closed; final boundary T-039.
+            Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.5.0 release preparation.
+            Evidence: commit docs/dev/reports/phases/5/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.

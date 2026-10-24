@@ -6,7 +6,7 @@ Current control and decision evidence; [DOCS_TASKS](DOCS_TASKS.md) owns checkbox
 
 - Mode and source: autodoc/autoloop, explicitly requested for six cumulative scopes in the project seed.
 - Multipass delivery mode: strict, the default; no flexible integration permission was supplied. Once established, earlier phase/task IDs, scope, milestone membership, ordering, dependencies and exits remain unchanged. Later scope is appended through bounded delivery increments.
-- Current pass: 5, Session-only game configuration; DOCS-007 accepted under scoped preapproval.
+- Current pass: 5, Session-only game configuration; DOCS-008 accepted under scoped preapproval.
 - Approval basis: first PROJECT and the proposed interaction rules approved by the user’s “Approve” response to proposal commit `f2e0d763ee168a52b5decff47e802552d23795cc`. Accordingly, ARCHITECTURE through TASKS and later PROJECT checkpoints are preapproved by the selected mode; later PROJECT approvals are waived, as announced before this checkpoint. New material later decisions are delegated to agent judgment with visible rationale and retained evidence.
 - Tracking: enabled for documentation and implementation by existing root AGENTS policy. Documentation milestone 1 (`sdd-docs-main`) and issues #1–#9 were created and read back against the bundled standard definitions before any repository modification.
 - Publication: every owned commit must be pushed/read back before further work. Main preparation stays on `design-docs/main`.
@@ -99,7 +99,7 @@ Delegated serialization vocabulary is fixed in C01 (six keys and finite tokens);
 | DOCS-005 | Pass 5: SPEC.md SHA-256 `97b963da55c419e0aa94a4b795a81dd85ca76de8e7c3e8490ae802e243af3c14`; SPEC-REVIEW-REPORT.md SHA-256 `c0ef533b9241fafcb110894cad676e2af4e8208e0112bf3935768504282fcf1e`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
 | DOCS-006 | Pass 5: PLAN.md SHA-256 `e7d3213e5b0a4eff735b20bc7020d14a748737964decec8de830d50aab5c4b84`; PLAN-REVIEW-REPORT.md SHA-256 `45148d7712700d534047c4c6d7a6f85b1c9f5e67a5271753f80cfc01ed011eb2`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
 | DOCS-007 | Pass 5: layout.md SHA-256 `9d2f57996ce594ed8f255bab7c35c7547631546e2e000d4e000d531c02d71d64`; PLAN-REVIEW-REPORT.md SHA-256 `7b9c6065dd6fb8030a66abf170c2bb2e5f1c6a2359d560389b06259c7c33f7e4`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
-| DOCS-008 | Pass 4: TASKS.md SHA-256 `dffd23e0eac9b0d488e85d2fa3e2102394bbd5634c9b2859851205d0b308cff9`; TASKS-REVIEW-REPORT.md SHA-256 `e2482011d070fea70145fb515cced4bcd1cf3dc49d20301b67b639a0370af632`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
+| DOCS-008 | Pass 5: TASKS.md SHA-256 `480c8884ba2ba5280bf93fbba90ec92fcfb92e0f80132fba1c69d29b5cae0512`; TASKS-REVIEW-REPORT.md SHA-256 `6faf8d6fb6a4acdc7ad0a381c266c2b37551bcb813e8769cf00141277d67f451`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
 | DOCS-009 | Not selected; remains pending after final autoloop pass. |
 
 Material unresolved decisions: none blocking current document authoring. Agent-resolved contract precision remains delegated. No implementation is authorized.
@@ -116,4 +116,4 @@ Material unresolved decisions: none blocking current document authoring. Agent-r
 
 ## Pending transitions
 
-Publish/read back the owning completion commit and close/read back issue #7. Then continue with DOCS-008. Reconcile real state before replay.
+Publish/read back the owning completion commit and close/read back issue #8. Then apply the agreed next-scope reset. Reconcile real state before replay.
