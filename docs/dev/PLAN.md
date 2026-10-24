@@ -95,3 +95,29 @@ Exit: demonstrate the integrated capability to inform continue/amend/simplify/st
 ### Milestone 3.2 — Phase review
 
 Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess G01, A10 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.3.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
+
+## Phase 4 — Penetrator gameplay
+
+Outcome: A limited earned ability traverses stacks and lands legally in the lowest cavity. Target version: **0.4.0**. Depends on: completed, verified, integrated and released Phase 3.
+
+Included/excluded scope: Mode-aware descent/rotation, activation/Hold exclusion, bonuses and white visual status. Configuration and persistent state are excluded.
+
+### Milestone 4.1 — Traversal and active-piece lifecycle
+
+Outcome and integration: Implement mode-aware terminal landing search; Integrate penetrator descent and legal contact; Implement atomic activation and active Hold exclusion.
+
+Prerequisite: phase entry gate.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify P01 activation and Hold exclusion, P02 traversal/terminal search, and P03 legal locking; earned rewards/indicator acceptance belongs to Milestone 4.2. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 4.2 — Rewards, indicators and acceptance
+
+Outcome and integration: Award capped bonuses in the lock transaction; Render white active ability and live bonus indicators; Verify penetrator interactions and document controls.
+
+Prerequisite: Milestone 4.1 completion and closure.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify P01–P03 complete reward/visual/gameplay integration and A11–A12. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 4.3 — Phase review
+
+Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess P01–P03, A11–A12 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.4.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
