@@ -106,3 +106,16 @@ Checks: semantic comparison against the governing roots, ownership/dependency an
 ### Finding SPEC-F03 — Timer condition under selectable locking
 
 H03 described starting a timer without qualifying the selected general policy. sdd-specify restricted that timer rule and A08 to interval locking, and explicitly stated that a general hard-drop placement is not a failed downward attempt under failed-down locking. C02 immediate override remains same-command locking. Recheck: all four general/drop policy combinations have one consistent result, including zero-distance drops and legal penetrator targets. Disposition: resolved within the current scope.
+
+## Revision 7
+
+Scope: cumulative product state through Configuration persistence; owner conformance review.
+
+- SPEC.md: SHA-256 `7b5dfb50a3900dd250d87a4c23062f202456b6012f15b738e064330679d472fe`.
+- PROJECT.md: SHA-256 `1915e035021c1e74f9bd4e7edbfd1b61838cb5e0fd6b22729ccfbf016e7353a8`.
+- ARCHITECTURE.md: SHA-256 `cc1634213cb0401e1dab46238d4082b5784cccbfb64a127ec206ba35a8a8b0bf`.
+- DECOMPOSITION.md: SHA-256 `02c8397c03317e22c996ac5a22a1f48b481f8aa6fa409b7447e563edc0b800b6`.
+
+Geometry/movement/transactions → Geometry, Board, GameSession; input/time/suspension → GameController; rendering/status → GameView. H01–H04 → PieceStream, LandingSolver and contact/Hold lifecycle; G01 → GhostVisibility; P01–P03 → mode-aware solver/session inventory and legal Board transaction; C01–C02 → Configuration and SettingsView; S01–S03 → guarded persistence adapters and initialization ordering; End-to-end success, rejection, timing, restart and browser acceptance map to the named owners. No contract requires a hidden browser-global dependency in the domain.
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
