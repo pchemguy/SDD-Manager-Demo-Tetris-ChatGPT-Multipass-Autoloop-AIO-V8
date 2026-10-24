@@ -61,11 +61,11 @@ Offset reference: [author-published SRS data](https://gist.github.com/Shuflduf/e
 
 ## H03 — Hard drop
 
-Space is edge-triggered hard drop. Move the piece directly to its computed landing without intermediate board writes. Repeated browser key events are ignored. A newly grounded piece starts its normal grounded timer; a zero-distance hard drop on an already grounded piece retains elapsed contact time. Hard drop does not itself imply immediate lock. Drop awards no score.
+When C01 enables it, Space is edge-triggered hard drop. Move the piece directly to its computed landing without intermediate board writes. Repeated browser key events are ignored. A newly grounded piece starts its normal grounded timer; a zero-distance hard drop on an already grounded piece retains elapsed contact time. Hard drop follows C02: the general policy retains its timer/failed-down behavior; the explicit immediate override locks in the same command. Drop awards no score.
 
 ## H04 — Grounded interval locking
 
-Enhanced gameplay uses a full 1000 ms contact interval instead of the basic failed-down lock. Start the contact deadline when a spawn, move, rotation or drop first has no permitted downward progress. Grounded lateral movement, rotation, failed down and zero-distance hard drop do not reset it. Becoming airborne cancels the deadline; a later contact starts a fresh full interval. Lock at the exact deadline only if the current piece is legally grounded. Suspension freezes elapsed contact time. Hold creates a new piece with new timing and invalidates the old deadline. Basic geometry/scoring/suspension remain applicable; enhanced kick/random/lock policies govern where specified.
+The interval policy uses a full 1000 ms contact interval; C02 selects the effective per-piece general policy, whose default is interval. Start the contact deadline when a spawn, move, rotation or drop first has no permitted downward progress. Grounded lateral movement, rotation, failed down and zero-distance hard drop do not reset it. Becoming airborne cancels the deadline; a later contact starts a fresh full interval. Lock at the exact deadline only if the current piece is legally grounded. Suspension freezes elapsed contact time. Hold creates a new piece with new timing and invalidates the old deadline. Basic geometry/scoring/suspension remain applicable; enhanced kick/random/lock policies govern where specified.
 
 ## Enhanced acceptance
 
@@ -97,3 +97,26 @@ Penetrator translations and rotation kick candidates may overlap occupied cells,
 Only the terminal in-board collision-free position may lock. No failed down or expired deadline may write an overlapping placement. Intermediate overlap neither removes nor changes settled cells; draw the active piece above settled visuals. At lock, clear penetrator status, place four kind-colored cells, clear rows/award score and bonus, update the indicator, then spawn an ordinary piece with Hold available. Game over/restart clear stale deadlines; restart resets bonuses and mode. P01/P02 belong to GameSession/LandingSolver, with Board retaining legal-placement enforcement.
 
 Acceptance A11: adversarial sealed cavities, several blocked layers, a legal target above the floor and no-valid-target move/rotation fixtures prove traversal, legal terminal locking and ghost/drop agreement. A12: zero/one/three bonuses, repeated activation, four-line awards at cap, active Hold rejection, white active rendering and restart exercise transaction and browser UI boundaries.
+
+## C01 — Configuration values and defaults
+
+Configuration owns the following six selected values. Values are exact case-sensitive strings; UI controls display descriptive labels rather than storage tokens.
+
+| Setting / stable key | Allowed values | Default |
+| --- | --- | --- |
+| Ghost / ghost | hide, dynamic, show | dynamic |
+| Hard drop / hardDrop | on, off | on |
+| Next preview / nextPreview | on, off | on |
+| Hard-drop locking / dropLock | general, immediate | general |
+| General locking / lock | failed, interval | interval |
+| Hold / hold | on, off | on |
+
+Render six labeled, keyboard-operable side-panel controls. Configuration changes preserve board, score, held piece and bonuses. Within the page, Restart preserves selected values; page reload initializes defaults. This configuration is session memory only; no cookie, local/session storage or URL reads/writes occur.
+
+## C02 — Live changes and locking
+
+Ghost/preview visibility and hard-drop/Hold enable flags apply on the next render/command without restarting. Ghost hide suppresses rendering, show always draws a projection and dynamic uses G01. Disabling hard drop makes Space a no-op. Disabling Hold makes its hotkeys no-ops but preserves stored kind; P01 still forbids active penetrator Hold when enabled. Preview shows exactly the next stream kind without consumption, and hides when off.
+
+Snapshot general and hard-drop lock policies when a piece spawns or arrives from Hold. A later policy selection is displayed immediately with a pending-for-next-piece indication if either selected value differs from that snapshot. It cannot reset the current contact deadline or retroactively lock. Under failed policy a failed gravity/soft-down attempt locks a legally grounded piece. A general hard drop positions it without a failed-down attempt, so a subsequent failed down locks. Under immediate drop policy a hard drop legally locks in the same command, including a zero-distance drop, irrespective of general policy. All locks satisfy Board and penetrator terminal legality. Restart starts a piece using the selected policies and clears pending status.
+
+Acceptance A13: every value/default, all three ghost modes and disabled input paths are exercised. A14: change both timing policies midair/grounded, verify current snapshot/deadline preserved, pending status and next-piece application; disabling/re-enabling Hold preserves stored kind; preview does not change sequence. A15: changes survive Restart but reload restores defaults with no persistence side effects. Browser controls remain labeled/focusable and game key handlers do not hijack control editing. Moving focus from the game surface into settings clears held gameplay inputs; fresh surface keydown is required to resume them. Simulation continues while the document remains visible and focused.

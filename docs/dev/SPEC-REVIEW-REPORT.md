@@ -76,3 +76,16 @@ Earlier B02/A01 generic rejection wording could include a blocked downward attem
 ### Finding SPEC-F02 — Active color exception
 
 B06 broadly described non-white current pieces; P01 requires white active penetrators. sdd-specify explicitly limits B06 to regular cells and routes active ability color to P01. Recheck: regular/settled cells remain non-white, active penetrators white. Disposition: resolved.
+
+## Revision 5
+
+Scope: cumulative product state through Session-only game configuration; owner conformance review.
+
+- SPEC.md: SHA-256 `97b963da55c419e0aa94a4b795a81dd85ca76de8e7c3e8490ae802e243af3c14`.
+- PROJECT.md: SHA-256 `344b922dfd4ce1e3384ae907270a2b6cb20b4cd33bee5aba9acde7c9a0250341`.
+- ARCHITECTURE.md: SHA-256 `35e5e1c278d382db28b0e45bbcb9db5236b6a7a4f1ef81e84352e274855bda20`.
+- DECOMPOSITION.md: SHA-256 `7e13dfc5e265dd4d8800136e519ba5336dd5e4a276eb18e17830979863798a22`.
+
+Geometry/movement/transactions → Geometry, Board, GameSession; input/time/suspension → GameController; rendering/status → GameView. H01–H04 → PieceStream, LandingSolver and contact/Hold lifecycle; G01 → GhostVisibility; P01–P03 → mode-aware solver/session inventory and legal Board transaction; C01–C02 → Configuration and SettingsView; End-to-end success, rejection, timing, restart and browser acceptance map to the named owners. No contract requires a hidden browser-global dependency in the domain.
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
