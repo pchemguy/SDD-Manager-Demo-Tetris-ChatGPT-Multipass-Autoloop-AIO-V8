@@ -1,7 +1,5 @@
 # Browser Tetris
 
-A browser-based single-player Tetris project. The classic-game [project brief](docs/dev/PROJECT.md) is proposed for review; no playable implementation is available yet.
+A static single-player desktop browser game project. The [project brief](docs/dev/PROJECT.md) defines its intended scope; no playable implementation is available yet.
 
-Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md).
-
-Current preparation scope and decisions are in [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md); [HANDOFF](docs/dev/HANDOFF.md) provides workflow continuity. There are no validated application setup or run commands yet.
+Development uses [SDD Manager](SDD-MANAGER.md). See the [AI-assisted development disclosure](AI_DISCLOSURE.md). Current requirements and delivery work are in [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md) and [TASKS](docs/dev/TASKS.md). [HANDOFF](docs/dev/HANDOFF.md) and [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) retain workflow continuity. Application setup/run commands remain unvalidated until implementation.

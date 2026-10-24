@@ -6,7 +6,7 @@ Current control and decision evidence; [DOCS_TASKS](DOCS_TASKS.md) owns checkbox
 
 - Mode and source: autodoc/autoloop, explicitly requested for six cumulative scopes in the project seed.
 - Multipass delivery mode: strict, the default; no flexible integration permission was supplied. Once established, earlier phase/task IDs, scope, milestone membership, ordering, dependencies and exits remain unchanged. Later scope is appended through bounded delivery increments.
-- Current pass: 2, Gameplay enhancements; cursor reset to DOCS-002.
+- Current pass: 2, Gameplay enhancements; DOCS-002 accepted under scoped preapproval.
 - Approval basis: first PROJECT and the proposed interaction rules approved by the user’s “Approve” response to proposal commit `f2e0d763ee168a52b5decff47e802552d23795cc`. Accordingly, ARCHITECTURE through TASKS and later PROJECT checkpoints are preapproved by the selected mode; later PROJECT approvals are waived, as announced before this checkpoint. New material later decisions are delegated to agent judgment with visible rationale and retained evidence.
 - Tracking: enabled for documentation and implementation by existing root AGENTS policy. Documentation milestone 1 (`sdd-docs-main`) and issues #1–#9 were created and read back against the bundled standard definitions before any repository modification.
 - Publication: every owned commit must be pushed/read back before further work. Main preparation stays on `design-docs/main`.
@@ -60,12 +60,16 @@ All entries below originate during pass 1 exploration. User-specified capabiliti
 
 Scope 1 completed at `7f874981df6d59b5523c510f44fcbc1a39b52ab2` with document publication and issue closures verified. Carry forward the approved cross-scope decisions; no unresolved material conflict. Protect all existing PLAN/TASKS phase blocks; append scope 2 delivery work only. Later document acceptance uses the recorded autoloop preapproval.
 
+### Scope 2 decisions
+
+Delegated contract precision: explicit clockwise SRS offset tables, with a separate I table and positive-down coordinates, verified against author-published data; Up rotation, C/Shift Hold and Space hard drop are edge-triggered. No counterclockwise/180 command is added. Fixed 1000 ms gravity and approved contact/reset rules remain. The modern-handling phase groups shared piece-lifecycle changes into three bounded milestones; prior baseline remains protected. Basis: delegated agent judgment under the user-approved autodoc/autoloop sequence; applicable to this and subsequent scopes. Status: active; reconsider if the related gameplay or persistence contract changes.
+
 ## Decisions and document evidence
 
 | Task | Current evidence / decision basis |
 | --- | --- |
 | DOCS-001 | Initialization commit `a8a958614771408144432618bc4e9f82ef8cecfc` published and exact remote ref verified. Four pre-existing root files preserved against initial commit `3cec5836208ffe62881ab5f4aec809152c962bdb`; records and checked DOCS-001 committed together. Issue #1 closed as completed and read back. |
-| DOCS-002 | Pass 1 [PROJECT proposal](PROJECT.md), SHA-256 `e7cbdb66fe1b201a43f30235956314927b54636c7076e6da227f488faf46797e`; human accepted the unchanged proposed bytes via “Approve” on 2026-10-24. Owner QC: complete classic seed coverage; no future additions adopted; scope/non-goals and proposals distinguishable; README disclosure/usage links resolve; principal-scope depth retained. Detailed contracts and browser execution not assessed. DOCS-002 closes in this acceptance commit; subsequent publication and issue #2 closure require readback. |
+| DOCS-002 | Pass 2: PROJECT.md SHA-256 `43d3867f365f0e2e0d73e11915d612fb0582874095e849e19c915671c3566320`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
 | DOCS-003 | Pass 1: ARCHITECTURE.md SHA-256 `9fa5316a28699356b8cdb67dbec75c8cf4de9b82798c5c501a6e4d13bb835849`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
 | DOCS-004 | Pass 1: DECOMPOSITION.md SHA-256 `f5370d6ef03258bdd1568ca269ed538b9c39090aed2e0de44bfdabb7b0969037`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
 | DOCS-005 | Pass 1: SPEC.md SHA-256 `970e3da5659435e04f4cdb8c055cbfeb47af3a1191bc9d268185e1fec68c4c7f`; SPEC-REVIEW-REPORT.md SHA-256 `898030c41e8bcbafb0955106250c3c7a5e26f8356ab09c6227d02e4adf99256b`. Accepted by autodoc/autoloop scoped preapproval after the first human PROJECT acceptance. Owner QC: current-scope conformance, ownership, links and content boundary checked; required adjacent report included where applicable. Publication/issue closure follows this commit. |
@@ -88,4 +92,4 @@ Material unresolved decisions: none blocking current document authoring. Agent-r
 
 ## Pending transitions
 
-Publish/read back reset, reopen/read back the same issues #2–#9, then revise PROJECT for scope 2. Keep DOCS-001 complete; retain all document content and existing decision/review history.
+Publish/read back the owning completion commit and close/read back issue #2. Then continue with DOCS-003. Reconcile real state before replay.

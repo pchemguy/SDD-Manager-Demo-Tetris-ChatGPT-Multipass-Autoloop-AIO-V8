@@ -1,38 +1,28 @@
 # Browser Tetris
 
-## Purpose and intended users
+## Purpose and users
 
-Build a small, playable, single-player Tetris game for desktop browser users with a keyboard. A player can open the page, play a complete game, see the score and restart after game over. The game runs entirely in the browser without an account or server service.
+Build a playable single-player game for desktop browser users with a keyboard. The player can open a static page, play a complete game, see score/status and restart. No account, backend service or deployed Node server is required.
 
 ## Principal scope
 
-- A 10-column, 20-row board with the seven standard tetromino shapes.
-- A single falling piece, lateral movement, clockwise rotation, automatic gravity and keyboard soft drop.
-- Collision handling against board boundaries and settled blocks; a rejected rotation leaves the piece unchanged.
-- Locking on a failed downward movement attempt, completed-row removal and line-based scoring.
-- A game-over state when the next piece cannot spawn, with an explicit restart that clears the board and score.
-- A visible board, score, game status, restart action and concise keyboard instructions.
+- A 10-column, 20-row board; seven tetrominoes; keyboard movement, clockwise rotation, fixed gravity, soft drop, line clearing and scoring; blocked-spawn game over and full restart.
+- Hold, a landing ghost, 7-bag randomization, deterministic wall kicks and hard drop. Grounded pieces normally lock after a full gravity interval; a hard drop does not bypass that delay.
 
-Use fixed gravity and independently sampled pieces to keep the game small and coherent. Exact timing, input bindings, spawn positions and scoring values belong to the behavioral specification.
+## Experience and quality
 
-## Desired qualities
+Use TypeScript, a Canvas board and ordinary HTML controls/status. Keep game rules independently testable from rendering, browser time and storage. A supplied piece sequence, ordered inputs and elapsed simulation time must produce repeatable outcomes. Loss of focus freezes game time and clears held keys; returning does not accumulate gravity. A legal lock is entirely within the board and does not overwrite settled cells.
 
-Gameplay must remain responsive and deterministic for a supplied input sequence, piece sequence and elapsed game time. A piece may never lock outside the board or overlap settled blocks. Focus loss suspends gameplay and clears held inputs so returning to the tab cannot cause accumulated gravity or unintended movement.
+Provide visible keyboard instructions, focus and game status; never communicate game over solely through colors. Chromium is primary and Playwright-managed Firefox secondary under the [browser policy](../../BROWSER_DEV_POLICY.md); headless interaction and screenshots are sufficient verification methods. Browser provisioning and actual gameplay remain unverified until implementation.
 
-Keep game rules independently verifiable, provide visible keyboard focus for HTML controls, and make game-over/restart status understandable without relying on piece colors alone. Verify browser behavior under the repository's [browser development policy](../../BROWSER_DEV_POLICY.md), with Chromium primary and Firefox secondary. No browser execution has been verified at the brief stage.
+## Boundaries
 
-## Proposed technical direction
+- Multiplayer, accounts, service-backed leaderboards, touch input and audio.
+- Conditional ghost visibility.
+- Penetrator mode and bonuses.
+- Next preview and settings controls.
+- Cookies, URL settings and saved game state.
 
-Use TypeScript for the client, Canvas for the board and ordinary HTML for controls and status. This keeps the rendered board compact while supporting direct keyboard interaction and independent rule tests. Static hosting is sufficient; Node is a development-tool runtime rather than a required deployed server.
+## Delivery constraints
 
-DOM cell rendering is a reasonable alternative when individual cells need semantic interaction; that is outside this game's scope. A UI framework could manage interface state but adds machinery without an established benefit here. Architecture will settle structural boundaries and build tooling after brief acceptance.
-
-## Scope exclusions
-
-Hold, ghost pieces, bag randomization, wall kicks, hard drop, configurable locking, next-piece preview, penetrator bonuses and settings controls are outside the defined game. No cookies, URL configuration or saved game state are required. Multiplayer, accounts, backend leaderboards, touch controls and audio are excluded.
-
-## Delivery and approval status
-
-This is a proposed project brief, not an implemented product. The proposed initial playable release is 0.1.0, published only after its implementation is authorized, completed, verified and integrated. Versioning and release publication must reflect delivered functionality rather than document preparation.
-
-Board dimensions, fixed gravity, baseline locking/random selection, technical direction, focus handling and exclusions beyond the supplied classic scope are agent proposals for human confirmation. No other material baseline question is currently identified; detailed contracts remain for the specification.
+Start with a minimal playable release at 0.1.0 and increase minor versions for compatible capability increments, patch versions for fixes. Every authorized implementation phase requires complete verification, explicit integration, release notes, a matching version tag and a published GitHub release. [PLAN](PLAN.md) owns delivery boundaries when available; precise gameplay contracts belong to SPEC.
