@@ -11,6 +11,7 @@ Build a playable single-player game for desktop browser users with a keyboard. T
 - Dynamic ghost visibility: show the projected piece only when every projected cell is in the lower half. A piece straddling the midline is hidden.
 - Bonus-funded penetrator activation for the active piece until legal lock. It traverses occupied cells without destroying them; gravity, hard drop and ghost share the lowest non-overlapping in-board landing. Hold is disabled while activated. Four-line clears award one bonus up to three; the side panel shows one symbol per available bonus. Penetrators are entirely white and regular pieces are non-white.
 - A side panel controls ghost mode, hard drop, next preview, hard-drop locking, general locking and Hold. Display/enabling changes apply immediately; selected locking-policy changes apply to the next piece and show a pending indication. Settings survive game restart.
+- Each setting restores independently from a valid explicit URL value, then a valid cookie, then its default. Valid explicit URL values, including defaults, are saved to cookies; omitted parameters retain saved values. User changes save cookies and update the URL without reloading.
 
 ## Experience and quality
 
@@ -21,7 +22,7 @@ Provide visible keyboard instructions, focus and game status; never communicate 
 ## Boundaries
 
 - Multiplayer, accounts, service-backed leaderboards, touch input and audio.
-- Persistence across page reloads: reloading starts with defaults. Cookies and URL settings are outside scope.
+- Saving running games, board state, scores, held pieces or bonuses.
 
 ## Delivery constraints
 
