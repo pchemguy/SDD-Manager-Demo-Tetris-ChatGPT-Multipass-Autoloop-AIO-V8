@@ -64,7 +64,7 @@ Outcome and integration: Implement ordered clockwise wall kicks; Implement share
 
 Prerequisite: Milestone 2.1 completion and closure.
 
-Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify H02, H02, A07, H03. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify H02 kick/landing behavior and H03 hard-drop placement/input only; full grounded-delay acceptance belongs to Milestone 2.3. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
 
 ### Milestone 2.3 — Contact timing and regression
 

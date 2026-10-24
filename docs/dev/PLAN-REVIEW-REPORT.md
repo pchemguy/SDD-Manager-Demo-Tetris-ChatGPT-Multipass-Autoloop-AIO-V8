@@ -101,3 +101,27 @@ Each current contract group maps to the corresponding bounded phase; the classic
 | Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 5
+
+Scope: cumulative product state through Gameplay enhancements; combined PLAN/layout review.
+
+- PLAN.md: SHA-256 `d6c7293187d0cedbe24dc4084c27e8e65c10d4fc44fa72b19f6dbea38cd6aad8`.
+- SPEC.md: SHA-256 `4a71fc23fe2bfb986ff51348eb4f6e2e30991aa59fcf281b2482ec7a2b1b6c0d`.
+- SPEC-REVIEW-REPORT.md: SHA-256 `06c0ed92f2340b555f869c7f1f51c5271f3a80c4d58eae5cc2514e232b215233`.
+- ARCHITECTURE.md: SHA-256 `044eee949727cb52ab9b3c913da77c319bb38d67f1cc4991f4d082dd92d55a90`.
+- DECOMPOSITION.md: SHA-256 `64266f02aa79df66efa4301ece6133bfd75db139419a3b8853d2b8cdc227971e`.
+- layout.md: SHA-256 `421b35f0586d932f978cedd19aa20c36dfb9f8bf7fad9ef345d557ec98a818d1`.
+
+Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Physical component/test/fixture/build/document ownership supports each route; no ambiguous source owner remains.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+### Finding PLAN-F02 — Placement versus timer integration
+
+Milestone 2.2 referenced all H03, including contact-delay behavior implemented at 2.3. sdd-plan narrowed 2.2 acceptance to kick/landing and hard-drop placement/input, retaining full H03/H04 timing at 2.3. Recheck: no 2.2 exit requires the later timer implementation; phase 2 still covers all H01–H04. Disposition: resolved within the current scope before protection. Phase 1 is unchanged.
