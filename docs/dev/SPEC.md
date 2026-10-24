@@ -57,7 +57,7 @@ Orientations are 0, R, 2, L in clockwise order. For a clockwise rotation, try th
 
 Offset reference: [author-published SRS data](https://gist.github.com/Shuflduf/e5186328dce8ab7d38a16d73971abcee). The explicit table is the contract; there is no external runtime dependency.
 
- Normal landing is the greatest downward displacement reachable by consecutive legal down moves before the first blocked move. LandingSolver returns exact occupied cells; ghost and hard drop consume the same result. Ghost draws behind the active piece with a distinct translucent/outline style and cannot obscure settled cells. The always-visible ghost is not a second active piece.
+ Normal landing is the greatest downward displacement reachable by consecutive legal down moves before the first blocked move. LandingSolver returns exact occupied cells; ghost and hard drop consume the same result. Ghost draws behind the active piece with a distinct translucent/outline style and cannot obscure settled cells. Ghost visibility is governed by G01; it is not a second active piece.
 
 ## H03 — Hard drop
 
@@ -75,3 +75,9 @@ Enhanced gameplay uses a full 1000 ms contact interval instead of the basic fail
 | A07 | Kicks choose the first legal offset or leave rotation unchanged; ghost cells equal hard-drop cells for all shapes and obstruction fixtures. |
 | A08 | Contact at t locks at t+1000, not the next partial gravity tick; grounded moves/failed down/drop do not reset; airborne and Hold cancel old deadlines. |
 | A09 | Browser checks exercise Hold once-per-piece, hard drop and ghost, plus classic scoring/game-over/restart and focus regressions. |
+
+## G01 — Dynamic ghost visibility
+
+Compute landing even when hidden. Under dynamic visibility, draw the ghost only if `min(projected occupied y) >= 10`. Thus a straddling piece and any piece with a cell above row 10 are hidden; a piece whose highest cell is row 10 is shown. Re-evaluate after every position/orientation/board change. Visibility has no effect on drop, input, collision or lock time. GhostVisibility owns classification; GameView consumes it.
+
+Acceptance A10: fixtures with highest projected rows 9, 10 and 11, including tall/straddling shapes and transitions in both directions, verify visibility and unchanged landing/timing. Repeat a representative browser interaction and screenshot.
