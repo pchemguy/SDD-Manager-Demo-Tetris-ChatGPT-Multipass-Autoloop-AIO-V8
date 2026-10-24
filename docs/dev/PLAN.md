@@ -121,3 +121,29 @@ Exit: demonstrate the integrated capability to inform continue/amend/simplify/st
 ### Milestone 4.3 — Phase review
 
 Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess P01–P03, A11–A12 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.4.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
+
+## Phase 5 — Session game configuration
+
+Outcome: Six side-panel settings control gameplay within the current page session. Target version: **0.5.0**. Depends on: completed, verified, integrated and released Phase 4.
+
+Included/excluded scope: Settings controls/defaults, next preview and safe live changes; no cookies, URL access or cross-reload persistence.
+
+### Milestone 5.1 — Configuration and controls
+
+Outcome and integration: Implement typed session settings and defaults; Render six labeled side-panel controls; Add non-consuming next preview and ghost display modes.
+
+Prerequisite: phase entry gate.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify C01 selected values/defaults/controls and C02 ghost/preview display; timing-policy/enable integration belongs to Milestone 5.2. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 5.2 — Live application and session acceptance
+
+Outcome and integration: Snapshot timing policies for each active piece; Apply enable flags and failed/immediate locking; Verify session configuration and document semantics.
+
+Prerequisite: Milestone 5.1 completion and closure.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify C01–C02 complete live behavior and A13–A15. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 5.3 — Phase review
+
+Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess C01–C02, A13–A15 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.5.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.

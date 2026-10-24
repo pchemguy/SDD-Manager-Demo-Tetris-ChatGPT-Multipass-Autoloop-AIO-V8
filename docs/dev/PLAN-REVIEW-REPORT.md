@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: **Ready** for the reviewed document scope. Current identities and criteria are in the latest review section below. Human acceptance/preapproval is retained separately in DOCS_PREPARATION.
+State: **Ready** for strategy only; layout coverage pending; TASKS blocked. Current identities and criteria are in the latest review section below. Human acceptance/preapproval is retained separately in DOCS_PREPARATION.
 
 ## Initial review
 
@@ -207,5 +207,27 @@ Each current contract group maps to the corresponding bounded phase; the classic
 | Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
 | Phase 3 | 1 milestones | One phase review milestone | One narrow rendering predicate and integration; splitting would add overhead without independent capability. |
 | Phase 4 | 2 milestones | One phase review milestone | Two cohesive boundaries separate rules/source handling from integrated UI/failure acceptance; small scope does not justify padding. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 10
+
+Scope: cumulative product state through Session-only game configuration; owner conformance review.
+
+- PLAN.md: SHA-256 `e7d3213e5b0a4eff735b20bc7020d14a748737964decec8de830d50aab5c4b84`.
+- SPEC.md: SHA-256 `97b963da55c419e0aa94a4b795a81dd85ca76de8e7c3e8490ae802e243af3c14`.
+- SPEC-REVIEW-REPORT.md: SHA-256 `c0ef533b9241fafcb110894cad676e2af4e8208e0112bf3935768504282fcf1e`.
+- ARCHITECTURE.md: SHA-256 `35e5e1c278d382db28b0e45bbcb9db5236b6a7a4f1ef81e84352e274855bda20`.
+- DECOMPOSITION.md: SHA-256 `7e13dfc5e265dd4d8800136e519ba5336dd5e4a276eb18e17830979863798a22`.
+
+Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Strategy-only gate: physical layout assessment is pending and TASKS remains blocked until combined PLAN/layout review.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 3 | 1 milestones | One phase review milestone | One narrow rendering predicate and integration; splitting would add overhead without independent capability. |
+| Phase 4 | 2 milestones | One phase review milestone | Two cohesive boundaries separate rules/source handling from integrated UI/failure acceptance; small scope does not justify padding. |
+| Phase 5 | 2 milestones | One phase review milestone | Two cohesive boundaries separate rules/source handling from integrated UI/failure acceptance; small scope does not justify padding. |
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
