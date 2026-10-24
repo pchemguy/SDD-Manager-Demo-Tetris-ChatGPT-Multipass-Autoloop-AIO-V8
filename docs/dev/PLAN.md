@@ -147,3 +147,29 @@ Exit: demonstrate the integrated capability to inform continue/amend/simplify/st
 ### Milestone 5.3 — Phase review
 
 Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess C01–C02, A13–A15 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Prepare release notes and version 0.5.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
+
+## Phase 6 — Persistent configuration
+
+Outcome: URL and cookies restore each setting independently without disrupting gameplay. Target version: **0.6.0**. Depends on: completed, verified, integrated and released Phase 5.
+
+Included/excluded scope: Configuration serialization, precedence, writes and guarded failures only; no board/game-state persistence or new gameplay features.
+
+### Milestone 6.1 — Source resolution and initialization
+
+Outcome and integration: Implement finite settings codecs and candidate parsing; Resolve URL, cookie and default values independently; Integrate cookie lifetime and initialization failure status.
+
+Prerequisite: phase entry gate.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify S01 source resolution, S02 cookie initialization and S03 guarded cookie status; History-change synchronization belongs to Milestone 6.2. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 6.2 — Synchronization and reload acceptance
+
+Outcome and integration: Synchronize selected changes to cookies and URL; Contain partial persistence failures; Verify real-browser reload persistence and document settings.
+
+Prerequisite: Milestone 6.1 completion and closure.
+
+Exit: demonstrate the integrated capability to inform continue/amend/simplify/stop; verify S01–S03 complete synchronization/failure handling and A16–A18. Whole-capability code review, applicable regression checks, blocker repairs, a committed milestone report and HANDOFF are required. The final delivery task owns the review/report/HANDOFF boundary; no standalone milestone review task.
+
+### Milestone 6.3 — Phase review
+
+Exactly one phase code-review/testing/report task after every delivery milestone completes and closes. Assess S01–S03, A16–A18 against the included scope above, retained predecessor behavior except explicitly changed policies, documentation, reproducible static build and required browser evidence. Review code separately from test execution, repair all blockers, retain TODO disposition and refresh HANDOFF. Include final implementation-report/TODO aggregation when this phase is the authorized full-list completion. Prepare release notes and version 0.6.0; explicitly integrate the verified complete phase, verify/publish the merged target, then tag and publish its GitHub release under the standing release instruction. Never release a partial or unverified phase.
