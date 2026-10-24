@@ -1,8 +1,8 @@
 # Project handoff
 
-Checkpoint: DOCS-008 accepted for scope 4 — Penetrator mode.
+Checkpoint: autoloop cursor reset into scope 5 — Session-only game configuration.
 
-Outcome: Current-scope roots through TASKS and required owner QC are prepared under recorded preapproval; no product implementation is claimed.
+Outcome: Retained all product documents; DOCS-002–009 unchecked for revision and same-issue reopening.
 
 ## Workflow and sources
 
@@ -24,5 +24,5 @@ Outcome: Current-scope roots through TASKS and required owner QC are prepared un
 
 ## Pending effects and next action
 
-- Publish/read back this checkpoint; then close/read back DOCS-008 issue #8; milestone and DOCS-009 remain open.
-- Next: perform the next agreed scope reset. Later Git/hosted effects must be reconciled rather than inferred from this snapshot.
+- Publish/read back this checkpoint; then reopen/read back the same DOCS-002–009 issues and verify the milestone remains open before PROJECT revision.
+- Next: revise PROJECT after verified reopening. Later Git/hosted effects must be reconciled rather than inferred from this snapshot.

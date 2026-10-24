@@ -6,7 +6,7 @@ Current control and decision evidence; [DOCS_TASKS](DOCS_TASKS.md) owns checkbox
 
 - Mode and source: autodoc/autoloop, explicitly requested for six cumulative scopes in the project seed.
 - Multipass delivery mode: strict, the default; no flexible integration permission was supplied. Once established, earlier phase/task IDs, scope, milestone membership, ordering, dependencies and exits remain unchanged. Later scope is appended through bounded delivery increments.
-- Current pass: 4, Penetrator mode; DOCS-008 accepted under scoped preapproval.
+- Current pass: 5, Session-only game configuration; cursor reset to DOCS-002.
 - Approval basis: first PROJECT and the proposed interaction rules approved by the user’s “Approve” response to proposal commit `f2e0d763ee168a52b5decff47e802552d23795cc`. Accordingly, ARCHITECTURE through TASKS and later PROJECT checkpoints are preapproved by the selected mode; later PROJECT approvals are waived, as announced before this checkpoint. New material later decisions are delegated to agent judgment with visible rationale and retained evidence.
 - Tracking: enabled for documentation and implementation by existing root AGENTS policy. Documentation milestone 1 (`sdd-docs-main`) and issues #1–#9 were created and read back against the bundled standard definitions before any repository modification.
 - Publication: every owned commit must be pushed/read back before further work. Main preparation stays on `design-docs/main`.
@@ -80,6 +80,10 @@ Scope 3 completed at `6955447c6583c2aff467828fb9335bf692ca348f` with document pu
 
 Carry forward terminal-search, active Hold exclusion, bonus cap and timing rules. Delegated visual precision: settled cells use their non-white kind color after ability ends; the visible active penetrator/ghost indicates white mode without retaining ability in settled cells. Candidate rotations use the same ordered kick offsets with penetrator-specific terminal legality. Two milestones separate traversal/lifecycle from reward/UI acceptance. Basis: delegated agent judgment under the user-approved autodoc/autoloop sequence; applicable to this and subsequent scopes. Status: active; reconsider if the related gameplay or persistence contract changes.
 
+### Scope 5 entry
+
+Scope 4 completed at `d5a4832b5a4ae75fd8609a793db6a2a1aa25211c` with document publication and issue closures verified. Carry forward the approved cross-scope decisions; no unresolved material conflict. Protect all existing PLAN/TASKS phase blocks; append scope 5 delivery work only. Later document acceptance uses the recorded autoloop preapproval.
+
 ## Decisions and document evidence
 
 | Task | Current evidence / decision basis |
@@ -104,8 +108,8 @@ Material unresolved decisions: none blocking current document authoring. Agent-r
 - Manual provenance: default enabled. Base `3cec5836208ffe62881ab5f4aec809152c962bdb`; seed `78e7be01a43b8a26033ce67c2565845bd64cec19` on `design-docs/ai-logs`; explicit two-parent merge `5bc22f5535bff34275d6d7c672ed81e25471ed4b` on `main`. Both remote refs exactly read back; packaged scaffold bytes verified before each commit. No transcript generated.
 - Preparation branch: `design-docs/main`, created from published `main` at `5bc22f5535bff34275d6d7c672ed81e25471ed4b`.
 - Credential continuity: ignored, untracked root `gh.tkn`; value excluded from evidence and commits. Required ignore rule integrated with scaffold.
-- Current reset: scope 3 completed through DOCS-008 at `6955447c6583c2aff467828fb9335bf692ca348f`; authorized predefined autoloop reset to scope 4.
+- Current reset: scope 4 completed through DOCS-008 at `d5a4832b5a4ae75fd8609a793db6a2a1aa25211c`; authorized predefined autoloop reset to scope 5.
 
 ## Pending transitions
 
-Publish/read back the owning completion commit and close/read back issue #8. Then apply the agreed next-scope reset. Reconcile real state before replay.
+Publish/read back reset, reopen/read back the same issues #2–#9, then revise PROJECT for scope 5. Keep DOCS-001 complete; retain all document content and existing decision/review history.
