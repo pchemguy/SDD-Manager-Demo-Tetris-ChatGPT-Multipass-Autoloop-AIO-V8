@@ -61,7 +61,7 @@ Offset reference: [author-published SRS data](https://gist.github.com/Shuflduf/e
 
 ## H03 — Hard drop
 
-When C01 enables it, Space is edge-triggered hard drop. Move the piece directly to its computed landing without intermediate board writes. Repeated browser key events are ignored. A newly grounded piece starts its normal grounded timer; a zero-distance hard drop on an already grounded piece retains elapsed contact time. Hard drop follows C02: the general policy retains its timer/failed-down behavior; the explicit immediate override locks in the same command. Drop awards no score.
+When C01 enables it, Space is edge-triggered hard drop. Move the piece directly to its computed landing without intermediate board writes. Repeated browser key events are ignored. Under interval locking, a newly grounded piece starts its contact timer; a zero-distance hard drop on an already grounded piece retains elapsed contact time. Under failed-down locking, positioning by hard drop is not a failed downward attempt. Hard drop follows C02: the general policy retains its timer/failed-down behavior; the explicit immediate override locks in the same command. Drop awards no score.
 
 ## H04 — Grounded interval locking
 
@@ -73,7 +73,7 @@ The interval policy uses a full 1000 ms contact interval; C02 selects the effect
 | --- | --- |
 | A06 | Every aligned seven-piece bag is a permutation; boundary refill and Hold stream consumption are exact. |
 | A07 | Kicks choose the first legal offset or leave rotation unchanged; ghost cells equal hard-drop cells for all shapes and obstruction fixtures. |
-| A08 | Contact at t locks at t+1000, not the next partial gravity tick; grounded moves/failed down/drop do not reset; airborne and Hold cancel old deadlines. |
+| A08 | Under interval locking, contact at t locks at t+1000, not the next partial gravity tick; grounded moves/failed down/drop do not reset; airborne and Hold cancel old deadlines. |
 | A09 | Browser checks exercise Hold once-per-piece, hard drop and ghost, plus classic scoring/game-over/restart and focus regressions. |
 
 ## G01 — Dynamic ghost visibility

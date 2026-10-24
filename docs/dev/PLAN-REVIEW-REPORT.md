@@ -254,3 +254,26 @@ Each current contract group maps to the corresponding bounded phase; the classic
 | Phase 5 | 2 milestones | One phase review milestone | Two cohesive boundaries separate rules/source handling from integrated UI/failure acceptance; small scope does not justify padding. |
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 12
+
+Scope: cumulative product state through Session-only game configuration; combined PLAN/layout review.
+
+- PLAN.md: SHA-256 `e7d3213e5b0a4eff735b20bc7020d14a748737964decec8de830d50aab5c4b84`.
+- SPEC.md: SHA-256 `f1a860348004d5d646160250559b8f519335f04ec891045acb21a5db89869a02`.
+- SPEC-REVIEW-REPORT.md: SHA-256 `a4f342150fe80571a9768ea204f9a71f107b0993006380785011a5aae7630db8`.
+- ARCHITECTURE.md: SHA-256 `35e5e1c278d382db28b0e45bbcb9db5236b6a7a4f1ef81e84352e274855bda20`.
+- DECOMPOSITION.md: SHA-256 `7e13dfc5e265dd4d8800136e519ba5336dd5e4a276eb18e17830979863798a22`.
+- layout.md: SHA-256 `9d2f57996ce594ed8f255bab7c35c7547631546e2e000d4e000d531c02d71d64`.
+
+Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Physical component/test/fixture/build/document ownership supports each route; no ambiguous source owner remains.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 3 | 1 milestones | One phase review milestone | One narrow rendering predicate and integration; splitting would add overhead without independent capability. |
+| Phase 4 | 2 milestones | One phase review milestone | Two cohesive boundaries separate rules/source handling from integrated UI/failure acceptance; small scope does not justify padding. |
+| Phase 5 | 2 milestones | One phase review milestone | Two cohesive boundaries separate rules/source handling from integrated UI/failure acceptance; small scope does not justify padding. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.

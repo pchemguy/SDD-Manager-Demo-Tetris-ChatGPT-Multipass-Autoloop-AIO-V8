@@ -147,3 +147,31 @@ Every milestone outcome has executable implementation/check/document work and as
 | 5.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 6
+
+Scope: cumulative product state through Session-only game configuration; owner conformance review.
+
+- TASKS.md: SHA-256 `480c8884ba2ba5280bf93fbba90ec92fcfb92e0f80132fba1c69d29b5cae0512`.
+- SPEC.md: SHA-256 `f1a860348004d5d646160250559b8f519335f04ec891045acb21a5db89869a02`.
+- PLAN.md: SHA-256 `e7d3213e5b0a4eff735b20bc7020d14a748737964decec8de830d50aab5c4b84`.
+- layout.md: SHA-256 `9d2f57996ce594ed8f255bab7c35c7547631546e2e000d4e000d531c02d71d64`.
+- PLAN-REVIEW-REPORT.md: SHA-256 `e13d5fc4e3432ec98bfdddd8730fa81e1748d96075a99ecef7b8010800b88ad5`.
+
+Every milestone outcome has executable implementation/check/document work and assigned review/report/HANDOFF evidence. Unique task IDs and feasible prerequisites preserve phase/milestone identity. Standalone milestone review occurs only for Milestone 1.1 (four delivery tasks and a phase with three delivery milestones); all other delivery milestones fold review into the final task. Each special phase review milestone contains exactly one task.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 4 tasks | One standalone milestone review | Bounded related modules; direct failure/integration checks and documentation included. |
+| 1.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 1.3 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 2.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 2.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 2.3 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 3.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 4.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 4.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 5.1 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+| 5.2 | 3 tasks | Folded review, no extra task | Bounded related modules; direct failure/integration checks and documentation included. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.

@@ -89,3 +89,20 @@ Scope: cumulative product state through Session-only game configuration; owner c
 Geometry/movement/transactions → Geometry, Board, GameSession; input/time/suspension → GameController; rendering/status → GameView. H01–H04 → PieceStream, LandingSolver and contact/Hold lifecycle; G01 → GhostVisibility; P01–P03 → mode-aware solver/session inventory and legal Board transaction; C01–C02 → Configuration and SettingsView; End-to-end success, rejection, timing, restart and browser acceptance map to the named owners. No contract requires a hidden browser-global dependency in the domain.
 
 Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 6
+
+Scope: cumulative product state through Session-only game configuration; owner conformance review.
+
+- SPEC.md: SHA-256 `f1a860348004d5d646160250559b8f519335f04ec891045acb21a5db89869a02`.
+- PROJECT.md: SHA-256 `344b922dfd4ce1e3384ae907270a2b6cb20b4cd33bee5aba9acde7c9a0250341`.
+- ARCHITECTURE.md: SHA-256 `35e5e1c278d382db28b0e45bbcb9db5236b6a7a4f1ef81e84352e274855bda20`.
+- DECOMPOSITION.md: SHA-256 `7e13dfc5e265dd4d8800136e519ba5336dd5e4a276eb18e17830979863798a22`.
+
+Geometry/movement/transactions → Geometry, Board, GameSession; input/time/suspension → GameController; rendering/status → GameView. H01–H04 → PieceStream, LandingSolver and contact/Hold lifecycle; G01 → GhostVisibility; P01–P03 → mode-aware solver/session inventory and legal Board transaction; C01–C02 → Configuration and SettingsView; End-to-end success, rejection, timing, restart and browser acceptance map to the named owners. No contract requires a hidden browser-global dependency in the domain.
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+### Finding SPEC-F03 — Timer condition under selectable locking
+
+H03 described starting a timer without qualifying the selected general policy. sdd-specify restricted that timer rule and A08 to interval locking, and explicitly stated that a general hard-drop placement is not a failed downward attempt under failed-down locking. C02 immediate override remains same-command locking. Recheck: all four general/drop policy combinations have one consistent result, including zero-distance drops and legal penetrator targets. Disposition: resolved within the current scope.
