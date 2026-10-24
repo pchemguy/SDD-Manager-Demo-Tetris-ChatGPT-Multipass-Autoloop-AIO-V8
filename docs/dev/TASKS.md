@@ -90,3 +90,23 @@ The [PLAN](PLAN.md) owns strategic outcomes/exits, [SPEC](SPEC.md) owns behavior
             Depends on: all Phase 2 delivery milestones completed and closed; final boundary T-021.
             Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.2.0 release preparation.
             Evidence: commit docs/dev/reports/phases/2/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.
+
+## Phase 3 — Dynamic ghost visibility
+
+- [ ] Phase 3 — Dynamic ghost visibility
+    - [ ] Milestone 3.1 — Midline-aware ghost
+        - [ ] T-023 — Implement occupied-cell midline classification
+            Scope: src/domain/ghost-visibility.ts; unit fixtures. Depends on: T-022.
+            Contracts: G01. Evidence: Highest projected row 9 hides, row 10/11 shows; tall straddling shapes hide.
+        - [ ] T-024 — Integrate dynamic visibility without landing side effects
+            Scope: src/browser/game-view.ts; application tests. Depends on: T-023.
+            Contracts: G01, A10. Evidence: Moves/rotations show/hide in both directions while drop target and deadlines remain identical.
+        - [ ] T-025 — Verify and document dynamic ghost behavior
+            Scope: tests/browser/ghost.spec.ts, docs/user/CONTROLS.md. Depends on: T-024.
+            Contracts: A10. Evidence: Inspect representative Chromium/Firefox transitions/screenshots and retained hard-drop timing; prepare release evidence.
+            Milestone boundary: after all other milestone tasks, review the whole capability code separately from tests, run applicable regressions and repair blockers; commit docs/dev/reports/phases/3/3.1.md and HANDOFF with this task’s result and initial checkbox. Publish/read back, then close/read back issue/milestone. Depends additionally on: T-023, T-024.
+    - [ ] Milestone 3.2 — Phase review
+        - [ ] T-026 — Review and report Phase 3
+            Depends on: all Phase 3 delivery milestones completed and closed; final boundary T-025.
+            Scope: code review, required tests, cross-milestone/browser regressions, blocker repair, phase exits and version 0.3.0 release preparation.
+            Evidence: commit docs/dev/reports/phases/3/PHASE-REPORT.md and HANDOFF with this checkbox; include TODO dispositions, build/docs evidence and root release-note preparation. After publication and hosted closures, explicitly integrate, verify/publish merged default, then publish the required version tag and GitHub release. No next phase before these gates and actual continuation authority.
