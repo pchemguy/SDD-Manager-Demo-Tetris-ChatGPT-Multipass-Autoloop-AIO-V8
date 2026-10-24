@@ -2,7 +2,7 @@
 
 ## Current gate
 
-State: **Ready** for strategy only; layout coverage pending; TASKS blocked. Current identities and criteria are in the latest review section below. Human acceptance/preapproval is retained separately in DOCS_PREPARATION.
+State: **Ready** for the reviewed document scope. Current identities and criteria are in the latest review section below. Human acceptance/preapproval is retained separately in DOCS_PREPARATION.
 
 ## Initial review
 
@@ -137,6 +137,27 @@ Scope: cumulative product state through Conditional ghost visibility; owner conf
 - DECOMPOSITION.md: SHA-256 `8bab4a2726e8c99bd243361b9653c0c9022597a23772ea1530bac74a1b72b6d0`.
 
 Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Strategy-only gate: physical layout assessment is pending and TASKS remains blocked until combined PLAN/layout review.
+
+| Group | Delivery count | Excluded review units | Assessment |
+| --- | --- | --- | --- |
+| Phase 1 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 2 | 3 milestones | One phase review milestone | Three cohesive integration boundaries; baseline/enhancement scope reviewed rather than inferred from count. |
+| Phase 3 | 1 milestones | One phase review milestone | One narrow rendering predicate and integration; splitting would add overhead without independent capability. |
+
+Checks: semantic comparison against the governing roots, ownership/dependency and acceptance mapping, current-scope exclusions, relative links and Markdown spacing. Prior phase/task text is compared byte-for-byte against the retained earlier scope; IDs, membership, dependencies and exits are unchanged. No unresolved confirmed finding. Readiness is limited to document conformance; runtime/browser behavior, installation, implementation acceptance and whole-package DOCS-009 QC have not run.
+
+## Revision 7
+
+Scope: cumulative product state through Conditional ghost visibility; combined PLAN/layout review.
+
+- PLAN.md: SHA-256 `b3105c44acf273f2abb154676d3ce425f210d36a18bb1f7435b8481f7554a504`.
+- SPEC.md: SHA-256 `959dd151792880656c0bb6cc19c0ec1567000679b2fa715d54590ff9fdceccbb`.
+- SPEC-REVIEW-REPORT.md: SHA-256 `fc1180b8008ccab31e66866651b3bd806c24e5b6aed56b4cdb5f1795b188c717`.
+- ARCHITECTURE.md: SHA-256 `57f71a70e3d48982fdd2804e44feef8e3e5d4113f31148e989ca75d8288af324`.
+- DECOMPOSITION.md: SHA-256 `8bab4a2726e8c99bd243361b9653c0c9022597a23772ea1530bac74a1b72b6d0`.
+- layout.md: SHA-256 `42e5d2a5f87a60d740746791bd995cbe51c329228df5d81d505c2bd28a767177`.
+
+Each current contract group maps to the corresponding bounded phase; the classic phase remains a complete useful game and later phases add coherent capabilities. Dependencies expose integration/browser evidence before release. Physical component/test/fixture/build/document ownership supports each route; no ambiguous source owner remains.
 
 | Group | Delivery count | Excluded review units | Assessment |
 | --- | --- | --- | --- |
