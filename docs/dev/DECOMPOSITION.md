@@ -16,6 +16,7 @@ Components refine the blocks in [ARCHITECTURE](ARCHITECTURE.md). Their interface
 | GhostVisibility | Classifies projected occupied cells relative to the midline; never changes the target. | LandingSolver result and selected display mode when configurable. | Upper/lower/straddling fixtures. |
 | Configuration | Owns validated selected settings and defaults; distinguishes immediate flags from per-piece timing snapshots. | Typed setting changes; GameController, GameSession and SettingsView consume it. | Mid-piece change, disabled commands, restart and reload fixtures. |
 | SettingsView | Renders six labeled controls, pending-policy status and next preview. | Configuration and stream peek; sends changes through controller. | Keyboard focus, controls and preview does not consume stream. |
+| SettingsPersistence | Reads URL/cookies, resolves each candidate via Configuration, writes valid explicit/changed values and reports partial failure. | URL/cookie/history ports; no board/session ownership. | Mixed-source precedence, duplicate/invalid values, blocked cookie/history and unrelated URL data. |
 
 ## Collaboration and lifecycle
 
