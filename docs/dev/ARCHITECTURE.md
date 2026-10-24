@@ -17,6 +17,7 @@ Browser events flow inward as commands; snapshots flow outward. The browser shel
 The game session is the authoritative owner of settled board cells, active piece, score and playing/game-over status. Geometry helpers and board queries remain pure. Random values and elapsed time are explicit inputs; production adapters and deterministic fixtures share the same contracts. Lock, completed-row removal, scoring and next spawn form one atomic transition, so observers never see half-cleared boards or two active pieces.
 
 - The domain owns piece-stream state, held piece, landing projection and lock/contact state. One projection feeds ghost display and hard drop; neither renderer nor keyboard code duplicates collision logic.
+- Visibility is a projection predicate, separate from solving the landing. Hiding the ghost never changes the drop target.
 
 ## Timing and failure boundaries
 
