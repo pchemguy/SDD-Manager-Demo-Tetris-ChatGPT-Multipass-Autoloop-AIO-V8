@@ -6,7 +6,7 @@ Current control and decision evidence; [DOCS_TASKS](DOCS_TASKS.md) owns checkbox
 
 - Mode and source: autodoc/autoloop, explicitly requested for six cumulative scopes in the project seed.
 - Multipass delivery mode: strict, the default; no flexible integration permission was supplied. Once established, earlier phase/task IDs, scope, milestone membership, ordering, dependencies and exits remain unchanged. Later scope is appended through bounded delivery increments.
-- Current pass: 2, Gameplay enhancements; DOCS-008 accepted under scoped preapproval.
+- Current pass: 3, Conditional ghost visibility; cursor reset to DOCS-002.
 - Approval basis: first PROJECT and the proposed interaction rules approved by the user’s “Approve” response to proposal commit `f2e0d763ee168a52b5decff47e802552d23795cc`. Accordingly, ARCHITECTURE through TASKS and later PROJECT checkpoints are preapproved by the selected mode; later PROJECT approvals are waived, as announced before this checkpoint. New material later decisions are delegated to agent judgment with visible rationale and retained evidence.
 - Tracking: enabled for documentation and implementation by existing root AGENTS policy. Documentation milestone 1 (`sdd-docs-main`) and issues #1–#9 were created and read back against the bundled standard definitions before any repository modification.
 - Publication: every owned commit must be pushed/read back before further work. Main preparation stays on `design-docs/main`.
@@ -64,6 +64,10 @@ Scope 1 completed at `7f874981df6d59b5523c510f44fcbc1a39b52ab2` with document pu
 
 Delegated contract precision: explicit clockwise SRS offset tables, with a separate I table and positive-down coordinates, verified against author-published data; Up rotation, C/Shift Hold and Space hard drop are edge-triggered. No counterclockwise/180 command is added. Fixed 1000 ms gravity and approved contact/reset rules remain. The modern-handling phase groups shared piece-lifecycle changes into three bounded milestones; prior baseline remains protected. Basis: delegated agent judgment under the user-approved autodoc/autoloop sequence; applicable to this and subsequent scopes. Status: active; reconsider if the related gameplay or persistence contract changes.
 
+### Scope 3 entry
+
+Scope 2 completed at `93d3ad4fe5fe2c96282c692d313c00f8a17001dd` with document publication and issue closures verified. Carry forward the approved cross-scope decisions; no unresolved material conflict. Protect all existing PLAN/TASKS phase blocks; append scope 3 delivery work only. Later document acceptance uses the recorded autoloop preapproval.
+
 ## Decisions and document evidence
 
 | Task | Current evidence / decision basis |
@@ -88,8 +92,8 @@ Material unresolved decisions: none blocking current document authoring. Agent-r
 - Manual provenance: default enabled. Base `3cec5836208ffe62881ab5f4aec809152c962bdb`; seed `78e7be01a43b8a26033ce67c2565845bd64cec19` on `design-docs/ai-logs`; explicit two-parent merge `5bc22f5535bff34275d6d7c672ed81e25471ed4b` on `main`. Both remote refs exactly read back; packaged scaffold bytes verified before each commit. No transcript generated.
 - Preparation branch: `design-docs/main`, created from published `main` at `5bc22f5535bff34275d6d7c672ed81e25471ed4b`.
 - Credential continuity: ignored, untracked root `gh.tkn`; value excluded from evidence and commits. Required ignore rule integrated with scaffold.
-- Current reset: scope 1 completed through DOCS-008 at `7f874981df6d59b5523c510f44fcbc1a39b52ab2`; authorized predefined autoloop reset to scope 2.
+- Current reset: scope 2 completed through DOCS-008 at `93d3ad4fe5fe2c96282c692d313c00f8a17001dd`; authorized predefined autoloop reset to scope 3.
 
 ## Pending transitions
 
-Publish/read back the owning completion commit and close/read back issue #8. Then apply the agreed next-scope reset. Reconcile real state before replay.
+Publish/read back reset, reopen/read back the same issues #2–#9, then revise PROJECT for scope 3. Keep DOCS-001 complete; retain all document content and existing decision/review history.
